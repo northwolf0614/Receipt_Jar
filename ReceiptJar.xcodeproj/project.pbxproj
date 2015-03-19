@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABB231711ABA49B500B5447D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231701ABA49B500B5447D /* main.m */; };
+		ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231731ABA49B500B5447D /* AppDelegate.m */; };
+		ABB231771ABA49B500B5447D /* ReceiptJar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABB231751ABA49B500B5447D /* ReceiptJar.xcdatamodeld */; };
+		ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231791ABA49B500B5447D /* ViewController.m */; };
+		ABB2317D1ABA49B500B5447D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB2317B1ABA49B500B5447D /* Main.storyboard */; };
+		ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB2317E1ABA49B500B5447D /* Images.xcassets */; };
+		ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB231801ABA49B500B5447D /* LaunchScreen.xib */; };
+		ABB2318E1ABA49B600B5447D /* ReceiptJarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABB231881ABA49B500B5447D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB231631ABA49B500B5447D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB2316A1ABA49B500B5447D;
+			remoteInfo = ReceiptJar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABB2316B1ABA49B500B5447D /* ReceiptJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB2316F1ABA49B500B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB231701ABA49B500B5447D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABB231721ABA49B500B5447D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ABB231731ABA49B500B5447D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ABB231761ABA49B500B5447D /* ReceiptJar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptJar.xcdatamodel; sourceTree = "<group>"; };
+		ABB231781ABA49B500B5447D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ABB231791ABA49B500B5447D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ABB2317C1ABA49B500B5447D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABB2317E1ABA49B500B5447D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ABB231811ABA49B500B5447D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ABB231871ABA49B500B5447D /* ReceiptJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB2318C1ABA49B600B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptJarTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABB231681ABA49B500B5447D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB231841ABA49B500B5447D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABB231621ABA49B500B5447D = {
+			isa = PBXGroup;
+			children = (
+				ABB2316D1ABA49B500B5447D /* ReceiptJar */,
+				ABB2318A1ABA49B500B5447D /* ReceiptJarTests */,
+				ABB2316C1ABA49B500B5447D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABB2316C1ABA49B500B5447D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABB2316B1ABA49B500B5447D /* ReceiptJar.app */,
+				ABB231871ABA49B500B5447D /* ReceiptJarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABB2316D1ABA49B500B5447D /* ReceiptJar */ = {
+			isa = PBXGroup;
+			children = (
+				ABB231721ABA49B500B5447D /* AppDelegate.h */,
+				ABB231731ABA49B500B5447D /* AppDelegate.m */,
+				ABB231781ABA49B500B5447D /* ViewController.h */,
+				ABB231791ABA49B500B5447D /* ViewController.m */,
+				ABB2317B1ABA49B500B5447D /* Main.storyboard */,
+				ABB2317E1ABA49B500B5447D /* Images.xcassets */,
+				ABB231801ABA49B500B5447D /* LaunchScreen.xib */,
+				ABB231751ABA49B500B5447D /* ReceiptJar.xcdatamodeld */,
+				ABB2316E1ABA49B500B5447D /* Supporting Files */,
+			);
+			path = ReceiptJar;
+			sourceTree = "<group>";
+		};
+		ABB2316E1ABA49B500B5447D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABB2316F1ABA49B500B5447D /* Info.plist */,
+				ABB231701ABA49B500B5447D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABB2318A1ABA49B500B5447D /* ReceiptJarTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */,
+				ABB2318B1ABA49B600B5447D /* Supporting Files */,
+			);
+			path = ReceiptJarTests;
+			sourceTree = "<group>";
+		};
+		ABB2318B1ABA49B600B5447D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABB2318C1ABA49B600B5447D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABB2316A1ABA49B500B5447D /* ReceiptJar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB231911ABA49B600B5447D /* Build configuration list for PBXNativeTarget "ReceiptJar" */;
+			buildPhases = (
+				ABB231671ABA49B500B5447D /* Sources */,
+				ABB231681ABA49B500B5447D /* Frameworks */,
+				ABB231691ABA49B500B5447D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReceiptJar;
+			productName = ReceiptJar;
+			productReference = ABB2316B1ABA49B500B5447D /* ReceiptJar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABB231861ABA49B500B5447D /* ReceiptJarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB231941ABA49B600B5447D /* Build configuration list for PBXNativeTarget "ReceiptJarTests" */;
+			buildPhases = (
+				ABB231831ABA49B500B5447D /* Sources */,
+				ABB231841ABA49B500B5447D /* Frameworks */,
+				ABB231851ABA49B500B5447D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB231891ABA49B500B5447D /* PBXTargetDependency */,
+			);
+			name = ReceiptJarTests;
+			productName = ReceiptJarTests;
+			productReference = ABB231871ABA49B500B5447D /* ReceiptJarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABB231631ABA49B500B5447D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = funkytonic;
+				TargetAttributes = {
+					ABB2316A1ABA49B500B5447D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					ABB231861ABA49B500B5447D = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = ABB2316A1ABA49B500B5447D;
+					};
+				};
+			};
+			buildConfigurationList = ABB231661ABA49B500B5447D /* Build configuration list for PBXProject "ReceiptJar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABB231621ABA49B500B5447D;
+			productRefGroup = ABB2316C1ABA49B500B5447D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABB2316A1ABA49B500B5447D /* ReceiptJar */,
+				ABB231861ABA49B500B5447D /* ReceiptJarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABB231691ABA49B500B5447D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB2317D1ABA49B500B5447D /* Main.storyboard in Resources */,
+				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
+				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB231851ABA49B500B5447D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABB231671ABA49B500B5447D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
+				ABB231711ABA49B500B5447D /* main.m in Sources */,
+				ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */,
+				ABB231771ABA49B500B5447D /* ReceiptJar.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB231831ABA49B500B5447D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB2318E1ABA49B600B5447D /* ReceiptJarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABB231891ABA49B500B5447D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB2316A1ABA49B500B5447D /* ReceiptJar */;
+			targetProxy = ABB231881ABA49B500B5447D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABB2317B1ABA49B500B5447D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABB2317C1ABA49B500B5447D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ABB231801ABA49B500B5447D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABB231811ABA49B500B5447D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABB2318F1ABA49B600B5447D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ABB231901ABA49B600B5447D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABB231921ABA49B600B5447D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReceiptJar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ABB231931ABA49B600B5447D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReceiptJar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ABB231951ABA49B600B5447D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ReceiptJarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReceiptJar.app/ReceiptJar";
+			};
+			name = Debug;
+		};
+		ABB231961ABA49B600B5447D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ReceiptJarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReceiptJar.app/ReceiptJar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABB231661ABA49B500B5447D /* Build configuration list for PBXProject "ReceiptJar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB2318F1ABA49B600B5447D /* Debug */,
+				ABB231901ABA49B600B5447D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB231911ABA49B600B5447D /* Build configuration list for PBXNativeTarget "ReceiptJar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB231921ABA49B600B5447D /* Debug */,
+				ABB231931ABA49B600B5447D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ABB231941ABA49B600B5447D /* Build configuration list for PBXNativeTarget "ReceiptJarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB231951ABA49B600B5447D /* Debug */,
+				ABB231961ABA49B600B5447D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ABB231751ABA49B500B5447D /* ReceiptJar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ABB231761ABA49B500B5447D /* ReceiptJar.xcdatamodel */,
+			);
+			currentVersion = ABB231761ABA49B500B5447D /* ReceiptJar.xcdatamodel */;
+			path = ReceiptJar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ABB231631ABA49B500B5447D /* Project object */;
+}
