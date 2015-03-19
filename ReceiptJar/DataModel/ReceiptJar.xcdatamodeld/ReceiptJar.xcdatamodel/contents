@@ -1,4 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14D105g" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CDCategory" representedClassName="CDCategory" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="UIColor"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="symbolLetter" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="CDExpense" inverseName="category" inverseEntity="CDExpense" syncable="YES"/>
+    </entity>
+    <entity name="CDDocument" representedClassName="CDDocument" syncable="YES">
+        <attribute name="file" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="receipt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDReceipt" inverseName="documents" inverseEntity="CDReceipt" syncable="YES"/>
+    </entity>
+    <entity name="CDExpense" representedClassName="CDExpense" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="gst" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="totalAmount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCategory" inverseName="expenses" inverseEntity="CDCategory" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDGroup" inverseName="expenses" inverseEntity="CDGroup" syncable="YES"/>
+        <relationship name="receipts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDReceipt" inverseName="expense" inverseEntity="CDReceipt" syncable="YES"/>
+    </entity>
+    <entity name="CDGroup" representedClassName="CDGroup" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="UIColor"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="CDExpense" inverseName="group" inverseEntity="CDExpense" syncable="YES"/>
+    </entity>
+    <entity name="CDReceipt" representedClassName="CDReceipt" syncable="YES">
+        <relationship name="documents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDDocument" inverseName="receipt" inverseEntity="CDDocument" syncable="YES"/>
+        <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDExpense" inverseName="receipts" inverseEntity="CDExpense" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDExpense" positionX="-252" positionY="-297" width="128" height="193"/>
+        <element name="CDCategory" positionX="-54" positionY="-297" width="128" height="103"/>
+        <element name="CDGroup" positionX="-20" positionY="-180" width="128" height="88"/>
+        <element name="CDDocument" positionX="124" positionY="-72" width="128" height="73"/>
+        <element name="CDReceipt" positionX="-74" positionY="-63" width="128" height="73"/>
+    </elements>
 </model>
