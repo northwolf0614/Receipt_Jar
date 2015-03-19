@@ -1,0 +1,10 @@
+PODS:
+  - iOS_Utility (0.0.2.LOCAL)
+
+DEPENDENCIES:
+  - iOS_Utility (> 0.0.1.LOCAL)
+
+SPEC CHECKSUMS:
+  iOS_Utility: 9c25cc9bb72dc28617081d8410174b93aff639ef
+
+COCOAPODS: 0.36.0

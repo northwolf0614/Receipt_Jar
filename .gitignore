@@ -23,4 +23,21 @@ DerivedData
 # you should judge for yourself, the pros and cons are mentioned at:
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
- Pods/
+Pods/
+Pods/Manifest.lock
+Pods/Headers/Private/iOS_Utility/iOS_Utility.h
+Pods/Headers/Public/iOS_Utility/iOS_Utility.h
+Pods/iOS_Utility/LICENSE
+Pods/iOS_Utility/iOS_Utility/iOS_Utility.h
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar-acknowledgements.markdown
+Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar-acknowledgements.plist
+Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar-dummy.m
+Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar-environment.h
+Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar-resources.sh
+Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.debug.xcconfig
+Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.release.xcconfig
+Pods/Target Support Files/Pods-ReceiptJar-iOS_Utility/Pods-ReceiptJar-iOS_Utility-dummy.m
+Pods/Target Support Files/Pods-ReceiptJar-iOS_Utility/Pods-ReceiptJar-iOS_Utility-prefix.pch
+Pods/Target Support Files/Pods-ReceiptJar-iOS_Utility/Pods-ReceiptJar-iOS_Utility-Private.xcconfig
+Pods/Target Support Files/Pods-ReceiptJar-iOS_Utility/Pods-ReceiptJar-iOS_Utility.xcconfig
