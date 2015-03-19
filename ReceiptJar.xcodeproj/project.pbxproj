@@ -6,17 +6,30 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		AB9612371ABA87BC00A145E1 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AB96123A1ABA87BC00A145E1 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				AB96123B1ABA880D00A145E1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		387CCB7C04B6F4F501ED0636 /* libPods-ReceiptJar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEFCF2769A143F725102BCC /* libPods-ReceiptJar.a */; };
+		AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB9612341ABA532900A145E1 /* ReceiptJar.xcdatamodeld */; };
 		ABB231711ABA49B500B5447D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231701ABA49B500B5447D /* main.m */; };
 		ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231731ABA49B500B5447D /* AppDelegate.m */; };
-		ABB231771ABA49B500B5447D /* ReceiptJar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABB231751ABA49B500B5447D /* ReceiptJar.xcdatamodeld */; };
 		ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231791ABA49B500B5447D /* ViewController.m */; };
 		ABB2317D1ABA49B500B5447D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB2317B1ABA49B500B5447D /* Main.storyboard */; };
 		ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB2317E1ABA49B500B5447D /* Images.xcassets */; };
 		ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB231801ABA49B500B5447D /* LaunchScreen.xib */; };
 		ABB2318E1ABA49B600B5447D /* ReceiptJarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */; };
-		ABE220A31ABA4B3D00E6D8ED /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = ABE220A21ABA4B3D00E6D8ED /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +45,13 @@
 /* Begin PBXFileReference section */
 		31F3CB15DDB3091CFA823AB7 /* Pods-ReceiptJar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptJar.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.release.xcconfig"; sourceTree = "<group>"; };
 		8356CE900105490FF7B41200 /* Pods-ReceiptJar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptJar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.debug.xcconfig"; sourceTree = "<group>"; };
+		AB9612351ABA532900A145E1 /* ReceiptJar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptJar.xcdatamodel; sourceTree = "<group>"; };
+		AB96123C1ABA8F9100A145E1 /* CoreDataEntityHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataEntityHeaders.h; sourceTree = "<group>"; };
 		ABB2316B1ABA49B500B5447D /* ReceiptJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB2316F1ABA49B500B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB231701ABA49B500B5447D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ABB231721ABA49B500B5447D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ABB231731ABA49B500B5447D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ABB231761ABA49B500B5447D /* ReceiptJar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptJar.xcdatamodel; sourceTree = "<group>"; };
 		ABB231781ABA49B500B5447D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		ABB231791ABA49B500B5447D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ABB2317C1ABA49B500B5447D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +60,6 @@
 		ABB231871ABA49B500B5447D /* ReceiptJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB2318C1ABA49B600B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptJarTests.m; sourceTree = "<group>"; };
-		ABE220A21ABA4B3D00E6D8ED /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		ABEFCF2769A143F725102BCC /* libPods-ReceiptJar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReceiptJar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,10 +82,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB9612331ABA532900A145E1 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AB96123C1ABA8F9100A145E1 /* CoreDataEntityHeaders.h */,
+				AB96123D1ABA8F9100A145E1 /* HumanFiles */,
+				AB96123E1ABA8F9100A145E1 /* MachineFiles */,
+				AB9612341ABA532900A145E1 /* ReceiptJar.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		AB96123D1ABA8F9100A145E1 /* HumanFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HumanFiles;
+			sourceTree = "<group>";
+		};
+		AB96123E1ABA8F9100A145E1 /* MachineFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MachineFiles;
+			sourceTree = "<group>";
+		};
 		ABB231621ABA49B500B5447D = {
 			isa = PBXGroup;
 			children = (
-				ABE220A21ABA4B3D00E6D8ED /* Podfile */,
 				ABB2316D1ABA49B500B5447D /* ReceiptJar */,
 				ABB2318A1ABA49B500B5447D /* ReceiptJarTests */,
 				ABB2316C1ABA49B500B5447D /* Products */,
@@ -93,6 +130,7 @@
 		ABB2316D1ABA49B500B5447D /* ReceiptJar */ = {
 			isa = PBXGroup;
 			children = (
+				AB9612331ABA532900A145E1 /* DataModel */,
 				ABB231721ABA49B500B5447D /* AppDelegate.h */,
 				ABB231731ABA49B500B5447D /* AppDelegate.m */,
 				ABB231781ABA49B500B5447D /* ViewController.h */,
@@ -100,7 +138,6 @@
 				ABB2317B1ABA49B500B5447D /* Main.storyboard */,
 				ABB2317E1ABA49B500B5447D /* Images.xcassets */,
 				ABB231801ABA49B500B5447D /* LaunchScreen.xib */,
-				ABB231751ABA49B500B5447D /* ReceiptJar.xcdatamodeld */,
 				ABB2316E1ABA49B500B5447D /* Supporting Files */,
 			);
 			path = ReceiptJar;
@@ -198,8 +235,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = funkytonic;
 				TargetAttributes = {
+					AB9612371ABA87BC00A145E1 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					ABB2316A1ABA49B500B5447D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 5P2S2MGCFY;
 					};
 					ABB231861ABA49B500B5447D = {
 						CreatedOnToolsVersion = 6.2;
@@ -222,6 +263,7 @@
 			targets = (
 				ABB2316A1ABA49B500B5447D /* ReceiptJar */,
 				ABB231861ABA49B500B5447D /* ReceiptJarTests */,
+				AB9612371ABA87BC00A145E1 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +275,6 @@
 			files = (
 				ABB2317D1ABA49B500B5447D /* Main.storyboard in Resources */,
 				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
-				ABE220A31ABA4B3D00E6D8ED /* Podfile in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +304,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		AB96123B1ABA880D00A145E1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/mogenerator -m ${PROJECT_NAME}/DataModel/${PROJECT_NAME}.xcdatamodeld/${PROJECT_NAME}.xcdatamodel -O ${PROJECT_NAME}/DataModel -M ${PROJECT_NAME}/DataModel/MachineFiles -H ${PROJECT_NAME}/DataModel/HumanFiles --template-var scalars=false --template-var arc=true --base-class MYManagedObject\n\nprintf '#ifndef _CoreDataHeader_h\\n#define _CoreDataHeader_h\\n\\n' > ${PROJECT_NAME}/DataModel/CoreDataEntityHeaders.h\nprintf '#import \\\"%s\\\"\\n' $(cd ${PROJECT_NAME}/DataModel/HumanFiles && ls -1 *.h) >> ${PROJECT_NAME}/DataModel/CoreDataEntityHeaders.h\nprintf '\\n#endif\\n' >> ${PROJECT_NAME}/DataModel/CoreDataEntityHeaders.h";
+		};
 		D77C4D7861E7435056935D7E /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,10 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
 				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
 				ABB231711ABA49B500B5447D /* main.m in Sources */,
 				ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */,
-				ABB231771ABA49B500B5447D /* ReceiptJar.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +384,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AB9612381ABA87BC00A145E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AB9612391ABA87BC00A145E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		ABB2318F1ABA49B600B5447D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -411,6 +479,7 @@
 			baseConfigurationReference = 8356CE900105490FF7B41200 /* Pods-ReceiptJar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ReceiptJar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,6 +491,7 @@
 			baseConfigurationReference = 31F3CB15DDB3091CFA823AB7 /* Pods-ReceiptJar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ReceiptJar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,6 +535,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AB96123A1ABA87BC00A145E1 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB9612381ABA87BC00A145E1 /* Debug */,
+				AB9612391ABA87BC00A145E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		ABB231661ABA49B500B5447D /* Build configuration list for PBXProject "ReceiptJar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -495,12 +573,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		ABB231751ABA49B500B5447D /* ReceiptJar.xcdatamodeld */ = {
+		AB9612341ABA532900A145E1 /* ReceiptJar.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				ABB231761ABA49B500B5447D /* ReceiptJar.xcdatamodel */,
+				AB9612351ABA532900A145E1 /* ReceiptJar.xcdatamodel */,
 			);
-			currentVersion = ABB231761ABA49B500B5447D /* ReceiptJar.xcdatamodel */;
+			currentVersion = AB9612351ABA532900A145E1 /* ReceiptJar.xcdatamodel */;
 			path = ReceiptJar.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
