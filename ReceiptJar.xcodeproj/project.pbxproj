@@ -34,10 +34,11 @@
 		AB96125D1ABA9A3E00A145E1 /* _CDExpense.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612561ABA9A3E00A145E1 /* _CDExpense.m */; };
 		AB96125E1ABA9A3E00A145E1 /* _CDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612581ABA9A3E00A145E1 /* _CDGroup.m */; };
 		AB96125F1ABA9A3E00A145E1 /* _CDReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96125A1ABA9A3E00A145E1 /* _CDReceipt.m */; };
+		AB9612641ABA9D7200A145E1 /* ExpenseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612621ABA9D7200A145E1 /* ExpenseTableViewController.m */; };
+		AB9612651ABA9D7200A145E1 /* ExpenseTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9612631ABA9D7200A145E1 /* ExpenseTableViewController.xib */; };
 		ABB231711ABA49B500B5447D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231701ABA49B500B5447D /* main.m */; };
 		ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231731ABA49B500B5447D /* AppDelegate.m */; };
 		ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231791ABA49B500B5447D /* ViewController.m */; };
-		ABB2317D1ABA49B500B5447D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB2317B1ABA49B500B5447D /* Main.storyboard */; };
 		ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB2317E1ABA49B500B5447D /* Images.xcassets */; };
 		ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB231801ABA49B500B5447D /* LaunchScreen.xib */; };
 		ABB2318E1ABA49B600B5447D /* ReceiptJarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */; };
@@ -80,6 +81,9 @@
 		AB9612581ABA9A3E00A145E1 /* _CDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDGroup.m; sourceTree = "<group>"; };
 		AB9612591ABA9A3E00A145E1 /* _CDReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDReceipt.h; sourceTree = "<group>"; };
 		AB96125A1ABA9A3E00A145E1 /* _CDReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDReceipt.m; sourceTree = "<group>"; };
+		AB9612611ABA9D7200A145E1 /* ExpenseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseTableViewController.h; sourceTree = "<group>"; };
+		AB9612621ABA9D7200A145E1 /* ExpenseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseTableViewController.m; sourceTree = "<group>"; };
+		AB9612631ABA9D7200A145E1 /* ExpenseTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseTableViewController.xib; sourceTree = "<group>"; };
 		ABB2316B1ABA49B500B5447D /* ReceiptJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB2316F1ABA49B500B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB231701ABA49B500B5447D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,7 +91,6 @@
 		ABB231731ABA49B500B5447D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ABB231781ABA49B500B5447D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		ABB231791ABA49B500B5447D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		ABB2317C1ABA49B500B5447D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABB2317E1ABA49B500B5447D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ABB231811ABA49B500B5447D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ABB231871ABA49B500B5447D /* ReceiptJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +165,16 @@
 			path = MachineFiles;
 			sourceTree = "<group>";
 		};
+		AB9612601ABA9D5000A145E1 /* ExpenseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB9612611ABA9D7200A145E1 /* ExpenseTableViewController.h */,
+				AB9612621ABA9D7200A145E1 /* ExpenseTableViewController.m */,
+				AB9612631ABA9D7200A145E1 /* ExpenseTableViewController.xib */,
+			);
+			path = ExpenseViewController;
+			sourceTree = "<group>";
+		};
 		ABB231621ABA49B500B5447D = {
 			isa = PBXGroup;
 			children = (
@@ -185,12 +198,12 @@
 		ABB2316D1ABA49B500B5447D /* ReceiptJar */ = {
 			isa = PBXGroup;
 			children = (
+				AB9612601ABA9D5000A145E1 /* ExpenseViewController */,
 				AB9612331ABA532900A145E1 /* DataModel */,
 				ABB231721ABA49B500B5447D /* AppDelegate.h */,
 				ABB231731ABA49B500B5447D /* AppDelegate.m */,
 				ABB231781ABA49B500B5447D /* ViewController.h */,
 				ABB231791ABA49B500B5447D /* ViewController.m */,
-				ABB2317B1ABA49B500B5447D /* Main.storyboard */,
 				ABB2317E1ABA49B500B5447D /* Images.xcassets */,
 				ABB231801ABA49B500B5447D /* LaunchScreen.xib */,
 				ABB2316E1ABA49B500B5447D /* Supporting Files */,
@@ -328,9 +341,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB2317D1ABA49B500B5447D /* Main.storyboard in Resources */,
 				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
+				AB9612651ABA9D7200A145E1 /* ExpenseTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +413,7 @@
 				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
 				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
 				AB9612501ABA9A2400A145E1 /* CDReceipt.m in Sources */,
+				AB9612641ABA9D7200A145E1 /* ExpenseTableViewController.m in Sources */,
 				AB96125F1ABA9A3E00A145E1 /* _CDReceipt.m in Sources */,
 				AB96124F1ABA9A2400A145E1 /* CDGroup.m in Sources */,
 				AB96124D1ABA9A2400A145E1 /* CDDocument.m in Sources */,
@@ -431,14 +445,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ABB2317B1ABA49B500B5447D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ABB2317C1ABA49B500B5447D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ABB231801ABA49B500B5447D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
