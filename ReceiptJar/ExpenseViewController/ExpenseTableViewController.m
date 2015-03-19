@@ -7,6 +7,9 @@
 //
 
 #import "ExpenseTableViewController.h"
+#import "ExpenseSummaryCell.h"
+#import "CoreDataEntityHeaders.h"
+#import "CoreDataHelper.h"
 
 @interface ExpenseTableViewController ()
 
@@ -22,6 +25,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ExpenseSummaryCell class]) bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    CoreDataHelper* dd = [CoreDataHelper sharedInstance];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +39,21 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 10;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+//    cell.backgroundColor = [UIColor redColor];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

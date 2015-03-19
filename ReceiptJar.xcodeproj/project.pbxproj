@@ -22,6 +22,10 @@
 
 /* Begin PBXBuildFile section */
 		387CCB7C04B6F4F501ED0636 /* libPods-ReceiptJar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEFCF2769A143F725102BCC /* libPods-ReceiptJar.a */; };
+		AB6C85641ABB68F800434690 /* ExpenseSummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C85621ABB68F800434690 /* ExpenseSummaryCell.m */; };
+		AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */; };
+		AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C85671ABB6AB500434690 /* CoreDataHelper.m */; };
+		AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85691ABB6D4E00434690 /* TestData.plist */; };
 		AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB9612341ABA532900A145E1 /* ReceiptJar.xcdatamodeld */; };
 		AB9612411ABA907A00A145E1 /* MYManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612401ABA907A00A145E1 /* MYManagedObject.m */; };
 		AB96124C1ABA9A2400A145E1 /* CDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612431ABA9A2400A145E1 /* CDCategory.m */; };
@@ -57,6 +61,12 @@
 /* Begin PBXFileReference section */
 		31F3CB15DDB3091CFA823AB7 /* Pods-ReceiptJar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptJar.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.release.xcconfig"; sourceTree = "<group>"; };
 		8356CE900105490FF7B41200 /* Pods-ReceiptJar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptJar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.debug.xcconfig"; sourceTree = "<group>"; };
+		AB6C85611ABB68F800434690 /* ExpenseSummaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseSummaryCell.h; sourceTree = "<group>"; };
+		AB6C85621ABB68F800434690 /* ExpenseSummaryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseSummaryCell.m; sourceTree = "<group>"; };
+		AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseSummaryCell.xib; sourceTree = "<group>"; };
+		AB6C85661ABB6AB500434690 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		AB6C85671ABB6AB500434690 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		AB6C85691ABB6D4E00434690 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		AB9612351ABA532900A145E1 /* ReceiptJar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptJar.xcdatamodel; sourceTree = "<group>"; };
 		AB96123C1ABA8F9100A145E1 /* CoreDataEntityHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataEntityHeaders.h; sourceTree = "<group>"; };
 		AB96123F1ABA907A00A145E1 /* MYManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYManagedObject.h; sourceTree = "<group>"; };
@@ -125,8 +135,11 @@
 				AB96123C1ABA8F9100A145E1 /* CoreDataEntityHeaders.h */,
 				AB96123F1ABA907A00A145E1 /* MYManagedObject.h */,
 				AB9612401ABA907A00A145E1 /* MYManagedObject.m */,
+				AB6C85661ABB6AB500434690 /* CoreDataHelper.h */,
+				AB6C85671ABB6AB500434690 /* CoreDataHelper.m */,
 				AB96123D1ABA8F9100A145E1 /* HumanFiles */,
 				AB96123E1ABA8F9100A145E1 /* MachineFiles */,
+				AB6C85691ABB6D4E00434690 /* TestData.plist */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -171,6 +184,9 @@
 				AB9612611ABA9D7200A145E1 /* ExpenseTableViewController.h */,
 				AB9612621ABA9D7200A145E1 /* ExpenseTableViewController.m */,
 				AB9612631ABA9D7200A145E1 /* ExpenseTableViewController.xib */,
+				AB6C85611ABB68F800434690 /* ExpenseSummaryCell.h */,
+				AB6C85621ABB68F800434690 /* ExpenseSummaryCell.m */,
+				AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */,
 			);
 			path = ExpenseViewController;
 			sourceTree = "<group>";
@@ -342,7 +358,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
+				AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
+				AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */,
 				AB9612651ABA9D7200A145E1 /* ExpenseTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,8 +434,10 @@
 				AB9612641ABA9D7200A145E1 /* ExpenseTableViewController.m in Sources */,
 				AB96125F1ABA9A3E00A145E1 /* _CDReceipt.m in Sources */,
 				AB96124F1ABA9A2400A145E1 /* CDGroup.m in Sources */,
+				AB6C85641ABB68F800434690 /* ExpenseSummaryCell.m in Sources */,
 				AB96124D1ABA9A2400A145E1 /* CDDocument.m in Sources */,
 				ABB231711ABA49B500B5447D /* main.m in Sources */,
+				AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */,
 				AB96124E1ABA9A2400A145E1 /* CDExpense.m in Sources */,
 				AB96125E1ABA9A3E00A145E1 /* _CDGroup.m in Sources */,
 				AB96125C1ABA9A3E00A145E1 /* _CDDocument.m in Sources */,
@@ -614,6 +634,7 @@
 				AB9612391ABA87BC00A145E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABB231661ABA49B500B5447D /* Build configuration list for PBXProject "ReceiptJar" */ = {
 			isa = XCConfigurationList;

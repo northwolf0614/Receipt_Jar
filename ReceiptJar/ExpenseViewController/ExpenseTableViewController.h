@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExpenseTableViewController : UITableViewController
+@interface ExpenseTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property(nonatomic, weak)IBOutlet UITableView* tableView;
 
 @end
