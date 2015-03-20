@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "ExpenseTableViewController.h"
+#import "CoreDataHelper.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[CoreDataHelper sharedInstance] loadTestData];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     ExpenseTableViewController* etvc = [[ExpenseTableViewController alloc] init];

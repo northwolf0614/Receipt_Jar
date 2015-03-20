@@ -11,12 +11,13 @@ const struct CDExpenseAttributes CDExpenseAttributes = {
 	.shortDesc = @"shortDesc",
 	.title = @"title",
 	.totalAmount = @"totalAmount",
+	.workRelatedPortion = @"workRelatedPortion",
 };
 
 const struct CDExpenseRelationships CDExpenseRelationships = {
-	.category = @"category",
-	.group = @"group",
+	.deductCategory = @"deductCategory",
 	.receipts = @"receipts",
+	.type = @"type",
 };
 
 @implementation CDExpenseID
@@ -52,6 +53,11 @@ const struct CDExpenseRelationships CDExpenseRelationships = {
 	}
 	if ([key isEqualToString:@"totalAmountValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"totalAmount"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
+	if ([key isEqualToString:@"workRelatedPortionValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"workRelatedPortion"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -109,9 +115,27 @@ const struct CDExpenseRelationships CDExpenseRelationships = {
 	[self setPrimitiveTotalAmount:[NSNumber numberWithFloat:value_]];
 }
 
-@dynamic category;
+@dynamic workRelatedPortion;
 
-@dynamic group;
+- (float)workRelatedPortionValue {
+	NSNumber *result = [self workRelatedPortion];
+	return [result floatValue];
+}
+
+- (void)setWorkRelatedPortionValue:(float)value_ {
+	[self setWorkRelatedPortion:[NSNumber numberWithFloat:value_]];
+}
+
+- (float)primitiveWorkRelatedPortionValue {
+	NSNumber *result = [self primitiveWorkRelatedPortion];
+	return [result floatValue];
+}
+
+- (void)setPrimitiveWorkRelatedPortionValue:(float)value_ {
+	[self setPrimitiveWorkRelatedPortion:[NSNumber numberWithFloat:value_]];
+}
+
+@dynamic deductCategory;
 
 @dynamic receipts;
 
@@ -123,6 +147,8 @@ const struct CDExpenseRelationships CDExpenseRelationships = {
 	[self didAccessValueForKey:@"receipts"];
 	return result;
 }
+
+@dynamic type;
 
 @end
 

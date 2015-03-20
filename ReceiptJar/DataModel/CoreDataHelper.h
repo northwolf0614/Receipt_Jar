@@ -13,5 +13,8 @@
 @interface CoreDataHelper : Singleton
 @property(nonatomic, readonly)NSManagedObjectContext* moc;
 
-- (void)save;
+- (void)saveContext;
+
+
+- (void)loadTestData;
 @end

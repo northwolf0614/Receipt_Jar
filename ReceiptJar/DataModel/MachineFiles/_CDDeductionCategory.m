@@ -1,38 +1,38 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to CDGroup.m instead.
+// Make changes to CDDeductionCategory.m instead.
 
-#import "_CDGroup.h"
+#import "_CDDeductionCategory.h"
 
-const struct CDGroupAttributes CDGroupAttributes = {
+const struct CDDeductionCategoryAttributes CDDeductionCategoryAttributes = {
 	.color = @"color",
 	.name = @"name",
 };
 
-const struct CDGroupRelationships CDGroupRelationships = {
+const struct CDDeductionCategoryRelationships CDDeductionCategoryRelationships = {
 	.expenses = @"expenses",
 };
 
-@implementation CDGroupID
+@implementation CDDeductionCategoryID
 @end
 
-@implementation _CDGroup
+@implementation _CDDeductionCategory
 
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription insertNewObjectForEntityForName:@"CDGroup" inManagedObjectContext:moc_];
+	return [NSEntityDescription insertNewObjectForEntityForName:@"CDDeductionCategory" inManagedObjectContext:moc_];
 }
 
 + (NSString*)entityName {
-	return @"CDGroup";
+	return @"CDDeductionCategory";
 }
 
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription entityForName:@"CDGroup" inManagedObjectContext:moc_];
+	return [NSEntityDescription entityForName:@"CDDeductionCategory" inManagedObjectContext:moc_];
 }
 
-- (CDGroupID*)objectID {
-	return (CDGroupID*)[super objectID];
+- (CDDeductionCategoryID*)objectID {
+	return (CDDeductionCategoryID*)[super objectID];
 }
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {

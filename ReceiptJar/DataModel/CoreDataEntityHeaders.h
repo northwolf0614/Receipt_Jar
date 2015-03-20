@@ -1,10 +1,10 @@
 #ifndef _CoreDataHeader_h
 #define _CoreDataHeader_h
 
-#import "CDCategory.h"
+#import "CDDeductionCategory.h"
 #import "CDDocument.h"
 #import "CDExpense.h"
-#import "CDGroup.h"
 #import "CDReceipt.h"
+#import "CDType.h"
 
 #endif

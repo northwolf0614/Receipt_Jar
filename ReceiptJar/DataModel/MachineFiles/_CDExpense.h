@@ -12,17 +12,18 @@ extern const struct CDExpenseAttributes {
 	__unsafe_unretained NSString *shortDesc;
 	__unsafe_unretained NSString *title;
 	__unsafe_unretained NSString *totalAmount;
+	__unsafe_unretained NSString *workRelatedPortion;
 } CDExpenseAttributes;
 
 extern const struct CDExpenseRelationships {
-	__unsafe_unretained NSString *category;
-	__unsafe_unretained NSString *group;
+	__unsafe_unretained NSString *deductCategory;
 	__unsafe_unretained NSString *receipts;
+	__unsafe_unretained NSString *type;
 } CDExpenseRelationships;
 
-@class CDCategory;
-@class CDGroup;
+@class CDDeductionCategory;
 @class CDReceipt;
+@class CDType;
 
 @interface CDExpenseID : NSManagedObjectID {}
 @end
@@ -69,17 +70,25 @@ extern const struct CDExpenseRelationships {
 
 //- (BOOL)validateTotalAmount:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) CDCategory *category;
+@property (nonatomic, strong) NSNumber* workRelatedPortion;
 
-//- (BOOL)validateCategory:(id*)value_ error:(NSError**)error_;
+@property (atomic) float workRelatedPortionValue;
+- (float)workRelatedPortionValue;
+- (void)setWorkRelatedPortionValue:(float)value_;
 
-@property (nonatomic, strong) CDGroup *group;
+//- (BOOL)validateWorkRelatedPortion:(id*)value_ error:(NSError**)error_;
 
-//- (BOOL)validateGroup:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong) CDDeductionCategory *deductCategory;
+
+//- (BOOL)validateDeductCategory:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSSet *receipts;
 
 - (NSMutableSet*)receiptsSet;
+
+@property (nonatomic, strong) CDType *type;
+
+//- (BOOL)validateType:(id*)value_ error:(NSError**)error_;
 
 @end
 
@@ -120,13 +129,19 @@ extern const struct CDExpenseRelationships {
 - (float)primitiveTotalAmountValue;
 - (void)setPrimitiveTotalAmountValue:(float)value_;
 
-- (CDCategory*)primitiveCategory;
-- (void)setPrimitiveCategory:(CDCategory*)value;
+- (NSNumber*)primitiveWorkRelatedPortion;
+- (void)setPrimitiveWorkRelatedPortion:(NSNumber*)value;
 
-- (CDGroup*)primitiveGroup;
-- (void)setPrimitiveGroup:(CDGroup*)value;
+- (float)primitiveWorkRelatedPortionValue;
+- (void)setPrimitiveWorkRelatedPortionValue:(float)value_;
+
+- (CDDeductionCategory*)primitiveDeductCategory;
+- (void)setPrimitiveDeductCategory:(CDDeductionCategory*)value;
 
 - (NSMutableSet*)primitiveReceipts;
 - (void)setPrimitiveReceipts:(NSMutableSet*)value;
+
+- (CDType*)primitiveType;
+- (void)setPrimitiveType:(CDType*)value;
 
 @end

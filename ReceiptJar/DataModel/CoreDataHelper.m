@@ -7,6 +7,7 @@
 //
 
 #import "CoreDataHelper.h"
+#import "CoreDataEntityHeaders.h"
 
 @implementation CoreDataHelper{
     NSManagedObjectContext* _managedObjectContext;
@@ -86,6 +87,59 @@
             abort();
         }
     }
+}
+
+#pragma mark - Test Data
+
+- (void)loadTestData{
+    NSDictionary* plist = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"TestData" ofType: @"plist"]];
+    
+    //Types
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:[CDType entityName] inManagedObjectContext:self.moc];
+    [fetchRequest setEntity:entity];
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.moc executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects.count == 0) {
+        [plist[@"types"] enumerateObjectsUsingBlock:^(NSDictionary* t, NSUInteger idx, BOOL* stop){
+            CDType* type = [CDType insertInManagedObjectContext:self.moc];
+            type.name = t[CDTypeAttributes.name];
+            type.symbolLetter = t[CDTypeAttributes.symbolLetter];
+            type.color = [[UIColor alloc] initWithString:t[CDTypeAttributes.color]];
+        }];
+        [self saveContext];
+    }
+    
+    //Deduction Category
+    fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[CDDeductionCategory entityName]];
+    fetchedObjects = [self.moc executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects.count == 0) {
+        [plist[@"deductCats"] enumerateObjectsUsingBlock:^(NSDictionary* t, NSUInteger idx, BOOL* stop){
+            CDDeductionCategory* cat = [CDDeductionCategory insertInManagedObjectContext:self.moc];
+            cat.name = t[CDDeductionCategoryAttributes.name];
+            cat.color = [[UIColor alloc] initWithString:t[CDDeductionCategoryAttributes.color]];
+        }];
+        [self saveContext];
+    }
+    
+    //Expense
+    fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[CDExpense entityName]];
+    fetchedObjects = [self.moc executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects.count == 0) {
+        [plist[@"expenses"] enumerateObjectsUsingBlock:^(NSDictionary* e, NSUInteger idx, BOOL* stop){
+            CDExpense* exp = [CDExpense insertInManagedObjectContext:self.moc];
+            exp.date = [e[CDExpenseAttributes.date] dateValueAsFormat:nil];
+            exp.location = e[CDExpenseAttributes.location];
+            exp.longDesc = e[CDExpenseAttributes.longDesc];
+            exp.shortDesc = e[CDExpenseAttributes.shortDesc];
+            exp.title = e[CDExpenseAttributes.title];
+            exp.totalAmount = e[CDExpenseAttributes.totalAmount];
+            exp.deductCategory = [CDDeductionCategory categoryWithName:e[CDExpenseRelationships.deductCategory] inManagedObjectContext:self.moc];
+            exp.type = [CDType typeWithName:e[CDExpenseRelationships.type] inManagedObjectContext:self.moc];
+        }];
+        [self saveContext];
+    }
+
 }
 
 @end

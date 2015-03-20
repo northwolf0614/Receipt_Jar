@@ -2,9 +2,122 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>categories</key>
-	<array/>
-	<key>groups</key>
-	<string></string>
+	<key>deductCats</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Car Expenses</string>
+			<key>color</key>
+			<string>100,100,100</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Car Expenses</string>
+			<key>color</key>
+			<string>100,100,100</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Other Travel Expenses</string>
+			<key>color</key>
+			<string>100,100,100</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Uniforms</string>
+			<key>color</key>
+			<string>100,100,100</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Self-education Expenses</string>
+			<key>color</key>
+			<string>100,100,100</string>
+		</dict>
+	</array>
+	<key>types</key>
+	<array>
+		<dict>
+			<key>color</key>
+			<string>255,186,0</string>
+			<key>name</key>
+			<string>Claim</string>
+			<key>symbolLetter</key>
+			<string>C</string>
+		</dict>
+		<dict>
+			<key>color</key>
+			<string>255,0,0</string>
+			<key>name</key>
+			<string>Reinburse</string>
+			<key>symbolLetter</key>
+			<string>R</string>
+		</dict>
+		<dict>
+			<key>color</key>
+			<string>129,130,101</string>
+			<key>name</key>
+			<string>N/A</string>
+			<key>symbolLetter</key>
+			<string>N</string>
+		</dict>
+	</array>
+	<key>expenses</key>
+	<array>
+		<dict>
+			<key>date</key>
+			<string>2014-05-03T17:30:08Z</string>
+			<key>location</key>
+			<string>100 Catherine Street</string>
+			<key>longDesc</key>
+			<string>This is a sample long long long description</string>
+			<key>shortDesc</key>
+			<string>ABC</string>
+			<key>title</key>
+			<string>Just a title</string>
+			<key>totalAmount</key>
+			<real>123.12</real>
+			<key>deductCategory</key>
+			<string>Car Expenses</string>
+			<key>type</key>
+			<string>Claim</string>
+		</dict>
+		<dict>
+			<key>date</key>
+			<string>2014-06-01T10:10:08Z</string>
+			<key>location</key>
+			<string>123 BongBong Street</string>
+			<key>longDesc</key>
+			<string>aefa faeifwjfvc  awefan faifafddae</string>
+			<key>shortDesc</key>
+			<string>short desc</string>
+			<key>title</key>
+			<string>test</string>
+			<key>totalAmount</key>
+			<real>0.99</real>
+			<key>deductCategory</key>
+			<string>Self-education Expenses</string>
+			<key>type</key>
+			<string>Reinburse</string>
+		</dict>
+		<dict>
+			<key>date</key>
+			<string>2015-01-30T00:00:00Z</string>
+			<key>location</key>
+			<string>10 Princes Hwy</string>
+			<key>longDesc</key>
+			<string>This is a sample long long long description</string>
+			<key>shortDesc</key>
+			<string>SD</string>
+			<key>title</key>
+			<string>title</string>
+			<key>totalAmount</key>
+			<real>99999.99000000001</real>
+			<key>deductCategory</key>
+			<string>Uniforms</string>
+			<key>type</key>
+			<string>N/A</string>
+		</dict>
+	</array>
 </dict>
 </plist>

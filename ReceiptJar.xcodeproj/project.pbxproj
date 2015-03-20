@@ -28,18 +28,18 @@
 		AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85691ABB6D4E00434690 /* TestData.plist */; };
 		AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB9612341ABA532900A145E1 /* ReceiptJar.xcdatamodeld */; };
 		AB9612411ABA907A00A145E1 /* MYManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612401ABA907A00A145E1 /* MYManagedObject.m */; };
-		AB96124C1ABA9A2400A145E1 /* CDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612431ABA9A2400A145E1 /* CDCategory.m */; };
 		AB96124D1ABA9A2400A145E1 /* CDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612451ABA9A2400A145E1 /* CDDocument.m */; };
 		AB96124E1ABA9A2400A145E1 /* CDExpense.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612471ABA9A2400A145E1 /* CDExpense.m */; };
-		AB96124F1ABA9A2400A145E1 /* CDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612491ABA9A2400A145E1 /* CDGroup.m */; };
 		AB9612501ABA9A2400A145E1 /* CDReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96124B1ABA9A2400A145E1 /* CDReceipt.m */; };
-		AB96125B1ABA9A3E00A145E1 /* _CDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612521ABA9A3E00A145E1 /* _CDCategory.m */; };
 		AB96125C1ABA9A3E00A145E1 /* _CDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612541ABA9A3E00A145E1 /* _CDDocument.m */; };
 		AB96125D1ABA9A3E00A145E1 /* _CDExpense.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612561ABA9A3E00A145E1 /* _CDExpense.m */; };
-		AB96125E1ABA9A3E00A145E1 /* _CDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612581ABA9A3E00A145E1 /* _CDGroup.m */; };
 		AB96125F1ABA9A3E00A145E1 /* _CDReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96125A1ABA9A3E00A145E1 /* _CDReceipt.m */; };
 		AB9612641ABA9D7200A145E1 /* ExpenseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612621ABA9D7200A145E1 /* ExpenseTableViewController.m */; };
 		AB9612651ABA9D7200A145E1 /* ExpenseTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9612631ABA9D7200A145E1 /* ExpenseTableViewController.xib */; };
+		AB96126A1ABB809300A145E1 /* CDDeductionCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612671ABB809300A145E1 /* CDDeductionCategory.m */; };
+		AB96126B1ABB809300A145E1 /* CDType.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612691ABB809300A145E1 /* CDType.m */; };
+		AB9612701ABB80A900A145E1 /* _CDDeductionCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96126D1ABB80A900A145E1 /* _CDDeductionCategory.m */; };
+		AB9612711ABB80A900A145E1 /* _CDType.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96126F1ABB80A900A145E1 /* _CDType.m */; };
 		ABB231711ABA49B500B5447D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231701ABA49B500B5447D /* main.m */; };
 		ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231731ABA49B500B5447D /* AppDelegate.m */; };
 		ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231791ABA49B500B5447D /* ViewController.m */; };
@@ -71,29 +71,29 @@
 		AB96123C1ABA8F9100A145E1 /* CoreDataEntityHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataEntityHeaders.h; sourceTree = "<group>"; };
 		AB96123F1ABA907A00A145E1 /* MYManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYManagedObject.h; sourceTree = "<group>"; };
 		AB9612401ABA907A00A145E1 /* MYManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYManagedObject.m; sourceTree = "<group>"; };
-		AB9612421ABA9A2400A145E1 /* CDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCategory.h; sourceTree = "<group>"; };
-		AB9612431ABA9A2400A145E1 /* CDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCategory.m; sourceTree = "<group>"; };
 		AB9612441ABA9A2400A145E1 /* CDDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDocument.h; sourceTree = "<group>"; };
 		AB9612451ABA9A2400A145E1 /* CDDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDocument.m; sourceTree = "<group>"; };
 		AB9612461ABA9A2400A145E1 /* CDExpense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDExpense.h; sourceTree = "<group>"; };
 		AB9612471ABA9A2400A145E1 /* CDExpense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDExpense.m; sourceTree = "<group>"; };
-		AB9612481ABA9A2400A145E1 /* CDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDGroup.h; sourceTree = "<group>"; };
-		AB9612491ABA9A2400A145E1 /* CDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDGroup.m; sourceTree = "<group>"; };
 		AB96124A1ABA9A2400A145E1 /* CDReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDReceipt.h; sourceTree = "<group>"; };
 		AB96124B1ABA9A2400A145E1 /* CDReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDReceipt.m; sourceTree = "<group>"; };
-		AB9612511ABA9A3E00A145E1 /* _CDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDCategory.h; sourceTree = "<group>"; };
-		AB9612521ABA9A3E00A145E1 /* _CDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDCategory.m; sourceTree = "<group>"; };
 		AB9612531ABA9A3E00A145E1 /* _CDDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDDocument.h; sourceTree = "<group>"; };
 		AB9612541ABA9A3E00A145E1 /* _CDDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDDocument.m; sourceTree = "<group>"; };
 		AB9612551ABA9A3E00A145E1 /* _CDExpense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDExpense.h; sourceTree = "<group>"; };
 		AB9612561ABA9A3E00A145E1 /* _CDExpense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDExpense.m; sourceTree = "<group>"; };
-		AB9612571ABA9A3E00A145E1 /* _CDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDGroup.h; sourceTree = "<group>"; };
-		AB9612581ABA9A3E00A145E1 /* _CDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDGroup.m; sourceTree = "<group>"; };
 		AB9612591ABA9A3E00A145E1 /* _CDReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDReceipt.h; sourceTree = "<group>"; };
 		AB96125A1ABA9A3E00A145E1 /* _CDReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDReceipt.m; sourceTree = "<group>"; };
 		AB9612611ABA9D7200A145E1 /* ExpenseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseTableViewController.h; sourceTree = "<group>"; };
 		AB9612621ABA9D7200A145E1 /* ExpenseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseTableViewController.m; sourceTree = "<group>"; };
 		AB9612631ABA9D7200A145E1 /* ExpenseTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseTableViewController.xib; sourceTree = "<group>"; };
+		AB9612661ABB809300A145E1 /* CDDeductionCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDeductionCategory.h; sourceTree = "<group>"; };
+		AB9612671ABB809300A145E1 /* CDDeductionCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDeductionCategory.m; sourceTree = "<group>"; };
+		AB9612681ABB809300A145E1 /* CDType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDType.h; sourceTree = "<group>"; };
+		AB9612691ABB809300A145E1 /* CDType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDType.m; sourceTree = "<group>"; };
+		AB96126C1ABB80A900A145E1 /* _CDDeductionCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDDeductionCategory.h; sourceTree = "<group>"; };
+		AB96126D1ABB80A900A145E1 /* _CDDeductionCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDDeductionCategory.m; sourceTree = "<group>"; };
+		AB96126E1ABB80A900A145E1 /* _CDType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDType.h; sourceTree = "<group>"; };
+		AB96126F1ABB80A900A145E1 /* _CDType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDType.m; sourceTree = "<group>"; };
 		ABB2316B1ABA49B500B5447D /* ReceiptJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB2316F1ABA49B500B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB231701ABA49B500B5447D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -147,14 +147,14 @@
 		AB96123D1ABA8F9100A145E1 /* HumanFiles */ = {
 			isa = PBXGroup;
 			children = (
-				AB9612421ABA9A2400A145E1 /* CDCategory.h */,
-				AB9612431ABA9A2400A145E1 /* CDCategory.m */,
+				AB9612661ABB809300A145E1 /* CDDeductionCategory.h */,
+				AB9612671ABB809300A145E1 /* CDDeductionCategory.m */,
+				AB9612681ABB809300A145E1 /* CDType.h */,
+				AB9612691ABB809300A145E1 /* CDType.m */,
 				AB9612441ABA9A2400A145E1 /* CDDocument.h */,
 				AB9612451ABA9A2400A145E1 /* CDDocument.m */,
 				AB9612461ABA9A2400A145E1 /* CDExpense.h */,
 				AB9612471ABA9A2400A145E1 /* CDExpense.m */,
-				AB9612481ABA9A2400A145E1 /* CDGroup.h */,
-				AB9612491ABA9A2400A145E1 /* CDGroup.m */,
 				AB96124A1ABA9A2400A145E1 /* CDReceipt.h */,
 				AB96124B1ABA9A2400A145E1 /* CDReceipt.m */,
 			);
@@ -164,14 +164,14 @@
 		AB96123E1ABA8F9100A145E1 /* MachineFiles */ = {
 			isa = PBXGroup;
 			children = (
-				AB9612511ABA9A3E00A145E1 /* _CDCategory.h */,
-				AB9612521ABA9A3E00A145E1 /* _CDCategory.m */,
+				AB96126C1ABB80A900A145E1 /* _CDDeductionCategory.h */,
+				AB96126D1ABB80A900A145E1 /* _CDDeductionCategory.m */,
+				AB96126E1ABB80A900A145E1 /* _CDType.h */,
+				AB96126F1ABB80A900A145E1 /* _CDType.m */,
 				AB9612531ABA9A3E00A145E1 /* _CDDocument.h */,
 				AB9612541ABA9A3E00A145E1 /* _CDDocument.m */,
 				AB9612551ABA9A3E00A145E1 /* _CDExpense.h */,
 				AB9612561ABA9A3E00A145E1 /* _CDExpense.m */,
-				AB9612571ABA9A3E00A145E1 /* _CDGroup.h */,
-				AB9612581ABA9A3E00A145E1 /* _CDGroup.m */,
 				AB9612591ABA9A3E00A145E1 /* _CDReceipt.h */,
 				AB96125A1ABA9A3E00A145E1 /* _CDReceipt.m */,
 			);
@@ -425,21 +425,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB96124C1ABA9A2400A145E1 /* CDCategory.m in Sources */,
-				AB96125B1ABA9A3E00A145E1 /* _CDCategory.m in Sources */,
 				AB96125D1ABA9A3E00A145E1 /* _CDExpense.m in Sources */,
 				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
 				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
 				AB9612501ABA9A2400A145E1 /* CDReceipt.m in Sources */,
 				AB9612641ABA9D7200A145E1 /* ExpenseTableViewController.m in Sources */,
 				AB96125F1ABA9A3E00A145E1 /* _CDReceipt.m in Sources */,
-				AB96124F1ABA9A2400A145E1 /* CDGroup.m in Sources */,
 				AB6C85641ABB68F800434690 /* ExpenseSummaryCell.m in Sources */,
+				AB9612711ABB80A900A145E1 /* _CDType.m in Sources */,
+				AB9612701ABB80A900A145E1 /* _CDDeductionCategory.m in Sources */,
 				AB96124D1ABA9A2400A145E1 /* CDDocument.m in Sources */,
 				ABB231711ABA49B500B5447D /* main.m in Sources */,
+				AB96126A1ABB809300A145E1 /* CDDeductionCategory.m in Sources */,
 				AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */,
 				AB96124E1ABA9A2400A145E1 /* CDExpense.m in Sources */,
-				AB96125E1ABA9A3E00A145E1 /* _CDGroup.m in Sources */,
+				AB96126B1ABB809300A145E1 /* CDType.m in Sources */,
 				AB96125C1ABA9A3E00A145E1 /* _CDDocument.m in Sources */,
 				ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */,
 				AB9612411ABA907A00A145E1 /* MYManagedObject.m in Sources */,

@@ -1,31 +1,31 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to CDCategory.h instead.
+// Make changes to CDType.h instead.
 
 #import <CoreData/CoreData.h>
 #import "MYManagedObject.h"
 
-extern const struct CDCategoryAttributes {
+extern const struct CDTypeAttributes {
 	__unsafe_unretained NSString *color;
 	__unsafe_unretained NSString *name;
 	__unsafe_unretained NSString *symbolLetter;
-} CDCategoryAttributes;
+} CDTypeAttributes;
 
-extern const struct CDCategoryRelationships {
+extern const struct CDTypeRelationships {
 	__unsafe_unretained NSString *expenses;
-} CDCategoryRelationships;
+} CDTypeRelationships;
 
 @class CDExpense;
 
 @class UIColor;
 
-@interface CDCategoryID : NSManagedObjectID {}
+@interface CDTypeID : NSManagedObjectID {}
 @end
 
-@interface _CDCategory : MYManagedObject {}
+@interface _CDType : MYManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) CDCategoryID* objectID;
+@property (nonatomic, readonly, strong) CDTypeID* objectID;
 
 @property (nonatomic, strong) UIColor* color;
 
@@ -45,7 +45,7 @@ extern const struct CDCategoryRelationships {
 
 @end
 
-@interface _CDCategory (ExpensesCoreDataGeneratedAccessors)
+@interface _CDType (ExpensesCoreDataGeneratedAccessors)
 - (void)addExpenses:(NSSet*)value_;
 - (void)removeExpenses:(NSSet*)value_;
 - (void)addExpensesObject:(CDExpense*)value_;
@@ -53,7 +53,7 @@ extern const struct CDCategoryRelationships {
 
 @end
 
-@interface _CDCategory (CoreDataGeneratedPrimitiveAccessors)
+@interface _CDType (CoreDataGeneratedPrimitiveAccessors)
 
 - (UIColor*)primitiveColor;
 - (void)setPrimitiveColor:(UIColor*)value;
