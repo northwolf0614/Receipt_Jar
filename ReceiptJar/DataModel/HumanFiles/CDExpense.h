@@ -1,5 +1,6 @@
 #import "_CDExpense.h"
 
 @interface CDExpense : _CDExpense {}
-// Custom logic goes here.
+
++ (NSArray*)sortedExpenseByAttribute:(NSString*)attribute ascending:(BOOL)ascending inManagedObjectContext:(NSManagedObjectContext*)moc;
 @end

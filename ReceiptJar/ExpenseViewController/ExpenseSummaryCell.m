@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.indicator.layer.cornerRadius = 10.0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -40,6 +40,7 @@
 		AB96126B1ABB809300A145E1 /* CDType.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612691ABB809300A145E1 /* CDType.m */; };
 		AB9612701ABB80A900A145E1 /* _CDDeductionCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96126D1ABB80A900A145E1 /* _CDDeductionCategory.m */; };
 		AB9612711ABB80A900A145E1 /* _CDType.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96126F1ABB80A900A145E1 /* _CDType.m */; };
+		AB9612761ABBAAFB00A145E1 /* SymbolView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612751ABBAAFB00A145E1 /* SymbolView.m */; };
 		ABB231711ABA49B500B5447D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231701ABA49B500B5447D /* main.m */; };
 		ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231731ABA49B500B5447D /* AppDelegate.m */; };
 		ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231791ABA49B500B5447D /* ViewController.m */; };
@@ -94,6 +95,9 @@
 		AB96126D1ABB80A900A145E1 /* _CDDeductionCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDDeductionCategory.m; sourceTree = "<group>"; };
 		AB96126E1ABB80A900A145E1 /* _CDType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDType.h; sourceTree = "<group>"; };
 		AB96126F1ABB80A900A145E1 /* _CDType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDType.m; sourceTree = "<group>"; };
+		AB9612741ABBAAFB00A145E1 /* SymbolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolView.h; sourceTree = "<group>"; };
+		AB9612751ABBAAFB00A145E1 /* SymbolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolView.m; sourceTree = "<group>"; };
+		AB9612771ABBC72B00A145E1 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		ABB2316B1ABA49B500B5447D /* ReceiptJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB2316F1ABA49B500B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB231701ABA49B500B5447D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 				AB6C85611ABB68F800434690 /* ExpenseSummaryCell.h */,
 				AB6C85621ABB68F800434690 /* ExpenseSummaryCell.m */,
 				AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */,
+				AB9612741ABBAAFB00A145E1 /* SymbolView.h */,
+				AB9612751ABBAAFB00A145E1 /* SymbolView.m */,
 			);
 			path = ExpenseViewController;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 				ABB2317E1ABA49B500B5447D /* Images.xcassets */,
 				ABB231801ABA49B500B5447D /* LaunchScreen.xib */,
 				ABB2316E1ABA49B500B5447D /* Supporting Files */,
+				AB9612771ABBC72B00A145E1 /* Constants.h */,
 			);
 			path = ReceiptJar;
 			sourceTree = "<group>";
@@ -443,6 +450,7 @@
 				AB96125C1ABA9A3E00A145E1 /* _CDDocument.m in Sources */,
 				ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */,
 				AB9612411ABA907A00A145E1 /* MYManagedObject.m in Sources */,
+				AB9612761ABBAAFB00A145E1 /* SymbolView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

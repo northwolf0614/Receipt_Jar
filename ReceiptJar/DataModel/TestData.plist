@@ -8,13 +8,13 @@
 			<key>name</key>
 			<string>Car Expenses</string>
 			<key>color</key>
-			<string>100,100,100</string>
+			<string>63,148,207</string>
 		</dict>
 		<dict>
 			<key>name</key>
 			<string>Car Expenses</string>
 			<key>color</key>
-			<string>100,100,100</string>
+			<string>73,207,63</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -26,7 +26,7 @@
 			<key>name</key>
 			<string>Uniforms</string>
 			<key>color</key>
-			<string>100,100,100</string>
+			<string>205,63,207</string>
 		</dict>
 		<dict>
 			<key>name</key>
@@ -115,6 +115,24 @@
 			<real>99999.99000000001</real>
 			<key>deductCategory</key>
 			<string>Uniforms</string>
+			<key>type</key>
+			<string>N/A</string>
+		</dict>
+		<dict>
+			<key>date</key>
+			<string>2015-01-15T06:00:00Z</string>
+			<key>location</key>
+			<string>200 Princes Hwy</string>
+			<key>longDesc</key>
+			<string>This is a sample very very long description</string>
+			<key>shortDesc</key>
+			<string>sd</string>
+			<key>title</key>
+			<string>TITLE</string>
+			<key>totalAmount</key>
+			<integer>1000000</integer>
+			<key>deductCategory</key>
+			<string>Self-education Expenses</string>
 			<key>type</key>
 			<string>N/A</string>
 		</dict>

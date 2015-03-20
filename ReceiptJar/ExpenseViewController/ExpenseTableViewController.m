@@ -7,6 +7,7 @@
 //
 
 #import "ExpenseTableViewController.h"
+#import "Constants.h"
 #import "ExpenseSummaryCell.h"
 #import "CoreDataEntityHeaders.h"
 #import "CoreDataHelper.h"
@@ -15,7 +16,10 @@
 
 @end
 
-@implementation ExpenseTableViewController
+@implementation ExpenseTableViewController{
+    NSDictionary* _expenses;
+    NSArray* _sectionKeys;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,7 +32,7 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ExpenseSummaryCell class]) bundle:nil] forCellReuseIdentifier:@"cell"];
     
-    CoreDataHelper* dd = [CoreDataHelper sharedInstance];
+    [self groupExpenseByMonth];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,20 +40,51 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)groupExpenseByMonth{
+    NSArray* exps = [CDExpense sortedExpenseByAttribute:CDExpenseAttributes.date ascending:YES inManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
+    _expenses = [exps groupByFilter:^(CDExpense* exp, NSUInteger idx, BOOL* stop){
+        return [exp.date stringAsFormat:@"MMM yyyy"];
+    }];
+    
+    _sectionKeys = [[_expenses allKeys] sortedArrayUsingComparator:^(NSString* key1, NSString* key2){
+        NSDate* date1 = [key1 dateValueAsFormat:@"MMM yyyy"];
+        NSDate* date2 = [key2 dateValueAsFormat:@"MMM yyyy"];
+        return [date1 compare:date2];
+    }];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return _sectionKeys.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [_expenses[_sectionKeys[section]] count];
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return _sectionKeys[section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    ExpenseSummaryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-//    cell.backgroundColor = [UIColor redColor];
+    CDExpense* exp = _expenses[_sectionKeys[indexPath.section]][indexPath.row];
+    
+    cell.indicator.backgroundColor = exp.deductCategory.color;
+    
+    cell.titleLabel.text = exp.title;
+    cell.titleLabel.textColor = exp.deductCategory.color;
+    
+    cell.dateLabel.text = [exp.date stringAsFormat:@"dff eee"];
+    cell.dateLabel.textColor = DEFAULT_GREY;
+    
+    cell.totalAmountLabel.text = [NSString stringWithFormat:@"$%.2f", exp.totalAmountValue];
+    cell.totalAmountLabel.textColor = exp.deductCategory.color;
+    
+    cell.symboView.symbolColor = exp.type.color;
+    cell.symboView.text = exp.type.symbolLetter;
     
     return cell;
 }
