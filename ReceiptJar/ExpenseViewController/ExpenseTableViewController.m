@@ -34,6 +34,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    //NavigationBar
     CGRect frame = self.navigationController.navigationBar.frame;
     self.tableView.contentInset = UIEdgeInsetsMake(frame.origin.y + frame.size.height, 0, 0, 0);
     self.tableHeaderViewTop.constant = frame.origin.y + frame.size.height;
@@ -159,9 +160,15 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"%f", self.tableView.contentOffset.y);
+    CGFloat height = fabsf(self.tableView.contentOffset.y) - self.tableHeaderViewTop.constant;
+    self.tableHeaderViewHeight.constant = height;
+}
+/*
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here, for example:
@@ -175,14 +182,5 @@
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

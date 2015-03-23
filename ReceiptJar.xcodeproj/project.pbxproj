@@ -22,6 +22,10 @@
 
 /* Begin PBXBuildFile section */
 		387CCB7C04B6F4F501ED0636 /* libPods-ReceiptJar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEFCF2769A143F725102BCC /* libPods-ReceiptJar.a */; };
+		AB2835CD1AC0BB16002532B9 /* AddReceiptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2835CB1AC0BB16002532B9 /* AddReceiptsViewController.m */; };
+		AB2835CE1AC0BB16002532B9 /* AddReceiptsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2835CC1AC0BB16002532B9 /* AddReceiptsViewController.xib */; };
+		AB2835D21AC0BB5B002532B9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2835D01AC0BB5B002532B9 /* CameraViewController.m */; };
+		AB2835D31AC0BB5B002532B9 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2835D11AC0BB5B002532B9 /* CameraViewController.xib */; };
 		AB6C85641ABB68F800434690 /* ExpenseSummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C85621ABB68F800434690 /* ExpenseSummaryCell.m */; };
 		AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */; };
 		AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C85671ABB6AB500434690 /* CoreDataHelper.m */; };
@@ -62,6 +66,12 @@
 /* Begin PBXFileReference section */
 		31F3CB15DDB3091CFA823AB7 /* Pods-ReceiptJar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptJar.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.release.xcconfig"; sourceTree = "<group>"; };
 		8356CE900105490FF7B41200 /* Pods-ReceiptJar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptJar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.debug.xcconfig"; sourceTree = "<group>"; };
+		AB2835CA1AC0BB16002532B9 /* AddReceiptsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReceiptsViewController.h; sourceTree = "<group>"; };
+		AB2835CB1AC0BB16002532B9 /* AddReceiptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReceiptsViewController.m; sourceTree = "<group>"; };
+		AB2835CC1AC0BB16002532B9 /* AddReceiptsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddReceiptsViewController.xib; sourceTree = "<group>"; };
+		AB2835CF1AC0BB5B002532B9 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		AB2835D01AC0BB5B002532B9 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		AB2835D11AC0BB5B002532B9 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		AB6C85611ABB68F800434690 /* ExpenseSummaryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseSummaryCell.h; sourceTree = "<group>"; };
 		AB6C85621ABB68F800434690 /* ExpenseSummaryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseSummaryCell.m; sourceTree = "<group>"; };
 		AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseSummaryCell.xib; sourceTree = "<group>"; };
@@ -132,6 +142,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2835C91AC0B9D3002532B9 /* AddReceipts */ = {
+			isa = PBXGroup;
+			children = (
+				AB2835CA1AC0BB16002532B9 /* AddReceiptsViewController.h */,
+				AB2835CB1AC0BB16002532B9 /* AddReceiptsViewController.m */,
+				AB2835CC1AC0BB16002532B9 /* AddReceiptsViewController.xib */,
+				AB2835CF1AC0BB5B002532B9 /* CameraViewController.h */,
+				AB2835D01AC0BB5B002532B9 /* CameraViewController.m */,
+				AB2835D11AC0BB5B002532B9 /* CameraViewController.xib */,
+			);
+			path = AddReceipts;
+			sourceTree = "<group>";
+		};
 		AB9612331ABA532900A145E1 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +243,7 @@
 		ABB2316D1ABA49B500B5447D /* ReceiptJar */ = {
 			isa = PBXGroup;
 			children = (
+				AB2835C91AC0B9D3002532B9 /* AddReceipts */,
 				AB9612601ABA9D5000A145E1 /* ExpenseViewController */,
 				AB9612331ABA532900A145E1 /* DataModel */,
 				ABB231721ABA49B500B5447D /* AppDelegate.h */,
@@ -364,7 +388,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2835D31AC0BB5B002532B9 /* CameraViewController.xib in Resources */,
 				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
+				AB2835CE1AC0BB16002532B9 /* AddReceiptsViewController.xib in Resources */,
 				AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
 				AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */,
@@ -433,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB96125D1ABA9A3E00A145E1 /* _CDExpense.m in Sources */,
+				AB2835CD1AC0BB16002532B9 /* AddReceiptsViewController.m in Sources */,
 				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
 				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
 				AB9612501ABA9A2400A145E1 /* CDReceipt.m in Sources */,
@@ -443,6 +470,7 @@
 				AB9612701ABB80A900A145E1 /* _CDDeductionCategory.m in Sources */,
 				AB96124D1ABA9A2400A145E1 /* CDDocument.m in Sources */,
 				ABB231711ABA49B500B5447D /* main.m in Sources */,
+				AB2835D21AC0BB5B002532B9 /* CameraViewController.m in Sources */,
 				AB96126A1ABB809300A145E1 /* CDDeductionCategory.m in Sources */,
 				AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */,
 				AB96124E1ABA9A2400A145E1 /* CDExpense.m in Sources */,
