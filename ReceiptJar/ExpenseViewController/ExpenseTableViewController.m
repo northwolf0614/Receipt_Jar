@@ -13,6 +13,10 @@
 #import "CoreDataHelper.h"
 
 @interface ExpenseTableViewController ()
+@property (strong, nonatomic) IBOutlet UIView *tableViewBackgroundView;
+@property (strong, nonatomic) IBOutlet UIView *tableHeaderView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderViewTop;
 
 @end
 
@@ -30,9 +34,40 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    CGRect frame = self.navigationController.navigationBar.frame;
+    self.tableView.contentInset = UIEdgeInsetsMake(frame.origin.y + frame.size.height, 0, 0, 0);
+    self.tableHeaderViewTop.constant = frame.origin.y + frame.size.height;
+    
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ExpenseSummaryCell class]) bundle:nil] forCellReuseIdentifier:@"cell"];
     
-    [self groupExpenseByMonth];
+    [self groupExpenseByMonth];    
+    if (_sectionKeys.count > 0) {
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        self.tableView.backgroundView = nil;
+    }
+    else{
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.tableView.backgroundView = self.tableViewBackgroundView;
+    }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+    });
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self setupTableHeaderView];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+}
+
+- (void)setupTableHeaderView{
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

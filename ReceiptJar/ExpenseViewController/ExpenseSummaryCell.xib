@@ -35,7 +35,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="99999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-TU-3Ad" userLabel="TotalAmount">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="99999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-TU-3Ad" userLabel="TotalAmount">
                         <rect key="frame" x="358.5" y="27.5" width="80" height="19.5"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="j4g-Ay-cYv"/>
@@ -44,7 +44,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNl-fB-JzT" customClass="SymbolView">
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNl-fB-JzT" customClass="SymbolView">
                         <rect key="frame" x="446.5" y="21" width="34.5" height="34.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -71,6 +71,7 @@
                         </variation>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="dNl-fB-JzT" firstAttribute="leading" secondItem="Laj-TU-3Ad" secondAttribute="trailing" constant="8" id="3kj-aZ-gMO"/>
                     <constraint firstItem="Laj-TU-3Ad" firstAttribute="leading" secondItem="Rda-EM-XFi" secondAttribute="trailing" constant="8" id="5am-zY-z0A"/>
