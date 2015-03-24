@@ -45,6 +45,8 @@
 		AB9612701ABB80A900A145E1 /* _CDDeductionCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96126D1ABB80A900A145E1 /* _CDDeductionCategory.m */; };
 		AB9612711ABB80A900A145E1 /* _CDType.m in Sources */ = {isa = PBXBuildFile; fileRef = AB96126F1ABB80A900A145E1 /* _CDType.m */; };
 		AB9612761ABBAAFB00A145E1 /* SymbolView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612751ABBAAFB00A145E1 /* SymbolView.m */; };
+		ABA5BA401AC0E1D500EC5646 /* DragDownAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA5BA3F1AC0E1D500EC5646 /* DragDownAnimator.m */; };
+		ABA5BA451AC1008E00EC5646 /* File in Resources */ = {isa = PBXBuildFile; fileRef = ABA5BA441AC1008E00EC5646 /* File */; };
 		ABB231711ABA49B500B5447D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231701ABA49B500B5447D /* main.m */; };
 		ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231731ABA49B500B5447D /* AppDelegate.m */; };
 		ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB231791ABA49B500B5447D /* ViewController.m */; };
@@ -108,6 +110,9 @@
 		AB9612741ABBAAFB00A145E1 /* SymbolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolView.h; sourceTree = "<group>"; };
 		AB9612751ABBAAFB00A145E1 /* SymbolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolView.m; sourceTree = "<group>"; };
 		AB9612771ABBC72B00A145E1 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		ABA5BA3E1AC0E1D500EC5646 /* DragDownAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDownAnimator.h; sourceTree = "<group>"; };
+		ABA5BA3F1AC0E1D500EC5646 /* DragDownAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDownAnimator.m; sourceTree = "<group>"; };
+		ABA5BA441AC1008E00EC5646 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		ABB2316B1ABA49B500B5447D /* ReceiptJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB2316F1ABA49B500B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB231701ABA49B500B5447D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -216,8 +221,18 @@
 				AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */,
 				AB9612741ABBAAFB00A145E1 /* SymbolView.h */,
 				AB9612751ABBAAFB00A145E1 /* SymbolView.m */,
+				ABA5BA3E1AC0E1D500EC5646 /* DragDownAnimator.h */,
+				ABA5BA3F1AC0E1D500EC5646 /* DragDownAnimator.m */,
 			);
 			path = ExpenseViewController;
+			sourceTree = "<group>";
+		};
+		ABA5BA431AC1007D00EC5646 /* Tesseract */ = {
+			isa = PBXGroup;
+			children = (
+				ABA5BA441AC1008E00EC5646 /* File */,
+			);
+			path = Tesseract;
 			sourceTree = "<group>";
 		};
 		ABB231621ABA49B500B5447D = {
@@ -243,6 +258,7 @@
 		ABB2316D1ABA49B500B5447D /* ReceiptJar */ = {
 			isa = PBXGroup;
 			children = (
+				ABA5BA431AC1007D00EC5646 /* Tesseract */,
 				AB2835C91AC0B9D3002532B9 /* AddReceipts */,
 				AB9612601ABA9D5000A145E1 /* ExpenseViewController */,
 				AB9612331ABA532900A145E1 /* DataModel */,
@@ -392,6 +408,7 @@
 				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
 				AB2835CE1AC0BB16002532B9 /* AddReceiptsViewController.xib in Resources */,
 				AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */,
+				ABA5BA451AC1008E00EC5646 /* File in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
 				AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */,
 				AB9612651ABA9D7200A145E1 /* ExpenseTableViewController.xib in Resources */,
@@ -466,6 +483,7 @@
 				AB9612641ABA9D7200A145E1 /* ExpenseTableViewController.m in Sources */,
 				AB96125F1ABA9A3E00A145E1 /* _CDReceipt.m in Sources */,
 				AB6C85641ABB68F800434690 /* ExpenseSummaryCell.m in Sources */,
+				ABA5BA401AC0E1D500EC5646 /* DragDownAnimator.m in Sources */,
 				AB9612711ABB80A900A145E1 /* _CDType.m in Sources */,
 				AB9612701ABB80A900A145E1 /* _CDDeductionCategory.m in Sources */,
 				AB96124D1ABA9A2400A145E1 /* CDDocument.m in Sources */,

@@ -11,6 +11,7 @@
 #import "ExpenseSummaryCell.h"
 #import "CoreDataEntityHeaders.h"
 #import "CoreDataHelper.h"
+#import "CameraViewController.h"
 
 @interface ExpenseTableViewController ()
 @property (strong, nonatomic) IBOutlet UIView *tableViewBackgroundView;
@@ -20,6 +21,7 @@
 
 @end
 
+const CGFloat DRAG_THRESHOLD = 200;
 @implementation ExpenseTableViewController{
     NSDictionary* _expenses;
     NSArray* _sectionKeys;
@@ -164,10 +166,16 @@
 #pragma mark - Table view delegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSLog(@"%f", self.tableView.contentOffset.y);
     CGFloat height = fabsf(self.tableView.contentOffset.y) - self.tableHeaderViewTop.constant;
     self.tableHeaderViewHeight.constant = height;
 }
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (fabsf(self.tableView.contentOffset.y) > DRAG_THRESHOLD) {
+        [self.navigationController presentViewController:[[CameraViewController alloc] init] animated:YES completion:nil];
+    }
+}
+
 /*
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
