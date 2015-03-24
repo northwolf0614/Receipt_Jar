@@ -10,5 +10,9 @@
 
 @interface ExpenseTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, weak)IBOutlet UITableView* tableView;
+@property (strong, nonatomic) IBOutlet UIView *tableViewBackgroundView;
+@property (strong, nonatomic) IBOutlet UIView *tableHeaderView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderViewTop;
 
 @end

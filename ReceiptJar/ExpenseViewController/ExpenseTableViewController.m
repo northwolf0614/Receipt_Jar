@@ -12,12 +12,10 @@
 #import "CoreDataEntityHeaders.h"
 #import "CoreDataHelper.h"
 #import "CameraViewController.h"
+#import "DragDownAnimator.h"
 
 @interface ExpenseTableViewController ()
-@property (strong, nonatomic) IBOutlet UIView *tableViewBackgroundView;
-@property (strong, nonatomic) IBOutlet UIView *tableHeaderView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderViewHeight;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderViewTop;
+
 
 @end
 
@@ -25,6 +23,8 @@ const CGFloat DRAG_THRESHOLD = 200;
 @implementation ExpenseTableViewController{
     NSDictionary* _expenses;
     NSArray* _sectionKeys;
+    
+    DragDownAnimator* _dragDownAnimator;
 }
 
 - (void)viewDidLoad {
@@ -53,9 +53,7 @@ const CGFloat DRAG_THRESHOLD = 200;
         self.tableView.backgroundView = self.tableViewBackgroundView;
     }
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-
-    });
+    _dragDownAnimator = [[DragDownAnimator alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -172,7 +170,11 @@ const CGFloat DRAG_THRESHOLD = 200;
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (fabsf(self.tableView.contentOffset.y) > DRAG_THRESHOLD) {
-        [self.navigationController presentViewController:[[CameraViewController alloc] init] animated:YES completion:nil];
+        CameraViewController* cameraViewController = [[CameraViewController alloc] init];
+        cameraViewController.modalPresentationStyle = UIModalPresentationCustom;
+        cameraViewController.transitioningDelegate = _dragDownAnimator;
+        
+        [self.navigationController presentViewController:cameraViewController animated:YES completion:nil];
     }
 }
 
