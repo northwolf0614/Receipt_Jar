@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DragDownAnimator : NSObject<UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
+@interface DragDownAnimator : NSObject<UIViewControllerAnimatedTransitioning>
 
 
 @end

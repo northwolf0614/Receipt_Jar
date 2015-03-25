@@ -28,6 +28,7 @@
     self.window.rootViewController = cvc;
     
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

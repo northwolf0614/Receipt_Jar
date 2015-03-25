@@ -7,18 +7,27 @@
 //
 
 #import "CameraViewController.h"
+#import "ExpenseDetailViewController.h"
 
-@interface CameraViewController ()
+@interface CameraViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
-@implementation CameraViewController
+@implementation CameraViewController{
+    UIImagePickerController* _imagePicker;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES];
     NSLog(@"%@ did load.", NSStringFromClass([self class]));
     // Do any additional setup after loading the view from its nib.
+    
+    _imagePicker = [[UIImagePickerController alloc] init];
+    _imagePicker.delegate = self;
+    _imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self.view addSubview:_imagePicker.view];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,18 +39,32 @@
     NSLog(@"dealloc %@.", NSStringFromClass([self class]));
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)dismiss:(id)sender {
     NSLog(@"Dismiss %@", NSStringFromClass([self class]));
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage* image = info[UIImagePickerControllerOriginalImage];
+    
+    
+    if (image) {
+        ExpenseDetailViewController* detailVC = [[ExpenseDetailViewController alloc] init];
+        NSMutableArray* viewControllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+        [viewControllers insertObject:detailVC atIndex:[viewControllers indexOfObject:self]];
+        [self.navigationController setViewControllers:viewControllers animated:NO];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 @end
