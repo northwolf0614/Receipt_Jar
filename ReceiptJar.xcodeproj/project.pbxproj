@@ -53,6 +53,7 @@
 		ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB2317E1ABA49B500B5447D /* Images.xcassets */; };
 		ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB231801ABA49B500B5447D /* LaunchScreen.xib */; };
 		ABB2318E1ABA49B600B5447D /* ReceiptJarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */; };
+		ABCEE8E11AC2DB55001CB3C2 /* ExpenseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8FDDA71AC2A4400087AC86 /* ExpenseDetailViewController.xib */; };
 		E78A236B1AC10910003AF89D /* G8RecognitionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A22101AC1090F003AF89D /* G8RecognitionOperation.m */; };
 		E78A236C1AC10910003AF89D /* G8RecognizedBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A22121AC1090F003AF89D /* G8RecognizedBlock.m */; };
 		E78A236D1AC10910003AF89D /* G8Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = E78A22141AC1090F003AF89D /* G8Tesseract.mm */; };
@@ -1155,6 +1156,7 @@
 				AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
 				AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */,
+				ABCEE8E11AC2DB55001CB3C2 /* ExpenseDetailViewController.xib in Resources */,
 				AB9612651ABA9D7200A145E1 /* ExpenseTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
