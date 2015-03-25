@@ -25,7 +25,6 @@ const NSTimeInterval DURATION = 0.45;
 
 @implementation DragDownAnimator{
     BOOL _isPresenting;
-    UIView* _tableViewWrapper;
 }
 
 - (void)dealloc{

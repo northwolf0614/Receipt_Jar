@@ -9,10 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class ExpenseTableViewController, CameraViewController;
 
 @interface DragDownAnimator : NSObject<UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
-@property(nonatomic, weak)ExpenseTableViewController* expenseViewController;
-@property(nonatomic, weak)CameraViewController* cameraViewController;
+
 
 @end
