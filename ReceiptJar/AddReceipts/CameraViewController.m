@@ -16,12 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationItem setHidesBackButton:YES];
+    NSLog(@"%@ did load.", NSStringFromClass([self class]));
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc{
+    NSLog(@"dealloc %@.", NSStringFromClass([self class]));
 }
 
 /*
@@ -34,4 +40,8 @@
 }
 */
 
+- (IBAction)dismiss:(id)sender {
+    NSLog(@"Dismiss %@", NSStringFromClass([self class]));
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

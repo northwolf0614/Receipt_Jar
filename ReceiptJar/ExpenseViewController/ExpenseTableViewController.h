@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExpenseTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ExpenseTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
 @property(nonatomic, weak)IBOutlet UITableView* tableView;
 @property (strong, nonatomic) IBOutlet UIView *tableViewBackgroundView;
 @property (strong, nonatomic) IBOutlet UIView *tableHeaderView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderViewHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeaderViewTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTop;
 
 @end

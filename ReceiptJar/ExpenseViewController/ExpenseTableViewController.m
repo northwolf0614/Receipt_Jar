@@ -13,8 +13,10 @@
 #import "CoreDataHelper.h"
 #import "CameraViewController.h"
 #import "DragDownAnimator.h"
+#import "ExpenseDetailViewController.h"
 
 @interface ExpenseTableViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *headerMaskTop;
 
 
 @end
@@ -40,6 +42,7 @@ const CGFloat DRAG_THRESHOLD = 200;
     CGRect frame = self.navigationController.navigationBar.frame;
     self.tableView.contentInset = UIEdgeInsetsMake(frame.origin.y + frame.size.height, 0, 0, 0);
     self.tableHeaderViewTop.constant = frame.origin.y + frame.size.height;
+    self.headerMaskTop.constant = frame.origin.y + frame.size.height;
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ExpenseSummaryCell class]) bundle:nil] forCellReuseIdentifier:@"cell"];
     
@@ -54,6 +57,7 @@ const CGFloat DRAG_THRESHOLD = 200;
     }
     
     _dragDownAnimator = [[DragDownAnimator alloc] init];
+    self.navigationController.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -164,33 +168,41 @@ const CGFloat DRAG_THRESHOLD = 200;
 #pragma mark - Table view delegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat height = fabsf(self.tableView.contentOffset.y) - self.tableHeaderViewTop.constant;
-    self.tableHeaderViewHeight.constant = height;
+    self.headerMaskTop.constant = fabsf(self.tableView.contentOffset.y);
+//    CGFloat height = fabsf(self.tableView.contentOffset.y) - self.tableHeaderViewTop.constant;
+//    self.tableHeaderViewHeight.constant = height;
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (fabsf(self.tableView.contentOffset.y) > DRAG_THRESHOLD) {
         CameraViewController* cameraViewController = [[CameraViewController alloc] init];
         cameraViewController.modalPresentationStyle = UIModalPresentationCustom;
-        cameraViewController.transitioningDelegate = _dragDownAnimator;
-        
-        [self.navigationController presentViewController:cameraViewController animated:YES completion:nil];
+
+        [self.navigationController pushViewController:cameraViewController animated:YES];
     }
 }
 
-/*
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    CDExpense* exp = _expenses[_sectionKeys[indexPath.section]][indexPath.row];
+    ExpenseDetailViewController* detailVC = [[ExpenseDetailViewController alloc] init];
+    detailVC.expense = exp;
     
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
-*/
 
+#pragma mark - UINavigationControllerDelegate
 
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC{
+    if ([toVC isKindOfClass:[CameraViewController class]]) {
+        return _dragDownAnimator;
+    }
+    if ([fromVC isKindOfClass:[CameraViewController class]]) {
+        return _dragDownAnimator;
+    }
+    
+    return nil;
+}
 @end

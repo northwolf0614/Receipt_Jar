@@ -22,14 +22,16 @@
 
 /* Begin PBXBuildFile section */
 		387CCB7C04B6F4F501ED0636 /* libPods-ReceiptJar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEFCF2769A143F725102BCC /* libPods-ReceiptJar.a */; };
-		AB2835CD1AC0BB16002532B9 /* AddReceiptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2835CB1AC0BB16002532B9 /* AddReceiptsViewController.m */; };
-		AB2835CE1AC0BB16002532B9 /* AddReceiptsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2835CC1AC0BB16002532B9 /* AddReceiptsViewController.xib */; };
 		AB2835D21AC0BB5B002532B9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2835D01AC0BB5B002532B9 /* CameraViewController.m */; };
 		AB2835D31AC0BB5B002532B9 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB2835D11AC0BB5B002532B9 /* CameraViewController.xib */; };
 		AB6C85641ABB68F800434690 /* ExpenseSummaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C85621ABB68F800434690 /* ExpenseSummaryCell.m */; };
 		AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */; };
 		AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C85671ABB6AB500434690 /* CoreDataHelper.m */; };
 		AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85691ABB6D4E00434690 /* TestData.plist */; };
+		AB8FDDA81AC2A4400087AC86 /* ExpenseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FDDA61AC2A4400087AC86 /* ExpenseDetailViewController.m */; };
+		AB8FDDA91AC2A4400087AC86 /* ExpenseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8FDDA71AC2A4400087AC86 /* ExpenseDetailViewController.xib */; };
+		AB8FDDAD1AC2CA4E0087AC86 /* SimpleExpenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FDDAB1AC2CA4E0087AC86 /* SimpleExpenseCell.m */; };
+		AB8FDDAE1AC2CA4E0087AC86 /* SimpleExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8FDDAC1AC2CA4E0087AC86 /* SimpleExpenseCell.xib */; };
 		AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB9612341ABA532900A145E1 /* ReceiptJar.xcdatamodeld */; };
 		AB9612411ABA907A00A145E1 /* MYManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612401ABA907A00A145E1 /* MYManagedObject.m */; };
 		AB96124D1ABA9A2400A145E1 /* CDDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9612451ABA9A2400A145E1 /* CDDocument.m */; };
@@ -68,9 +70,6 @@
 /* Begin PBXFileReference section */
 		31F3CB15DDB3091CFA823AB7 /* Pods-ReceiptJar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptJar.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.release.xcconfig"; sourceTree = "<group>"; };
 		8356CE900105490FF7B41200 /* Pods-ReceiptJar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReceiptJar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReceiptJar/Pods-ReceiptJar.debug.xcconfig"; sourceTree = "<group>"; };
-		AB2835CA1AC0BB16002532B9 /* AddReceiptsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReceiptsViewController.h; sourceTree = "<group>"; };
-		AB2835CB1AC0BB16002532B9 /* AddReceiptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReceiptsViewController.m; sourceTree = "<group>"; };
-		AB2835CC1AC0BB16002532B9 /* AddReceiptsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddReceiptsViewController.xib; sourceTree = "<group>"; };
 		AB2835CF1AC0BB5B002532B9 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		AB2835D01AC0BB5B002532B9 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		AB2835D11AC0BB5B002532B9 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
@@ -80,6 +79,12 @@
 		AB6C85661ABB6AB500434690 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		AB6C85671ABB6AB500434690 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		AB6C85691ABB6D4E00434690 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
+		AB8FDDA51AC2A4400087AC86 /* ExpenseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseDetailViewController.h; sourceTree = "<group>"; };
+		AB8FDDA61AC2A4400087AC86 /* ExpenseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseDetailViewController.m; sourceTree = "<group>"; };
+		AB8FDDA71AC2A4400087AC86 /* ExpenseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseDetailViewController.xib; sourceTree = "<group>"; };
+		AB8FDDAA1AC2CA4E0087AC86 /* SimpleExpenseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleExpenseCell.h; sourceTree = "<group>"; };
+		AB8FDDAB1AC2CA4E0087AC86 /* SimpleExpenseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleExpenseCell.m; sourceTree = "<group>"; };
+		AB8FDDAC1AC2CA4E0087AC86 /* SimpleExpenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleExpenseCell.xib; sourceTree = "<group>"; };
 		AB9612351ABA532900A145E1 /* ReceiptJar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReceiptJar.xcdatamodel; sourceTree = "<group>"; };
 		AB96123C1ABA8F9100A145E1 /* CoreDataEntityHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataEntityHeaders.h; sourceTree = "<group>"; };
 		AB96123F1ABA907A00A145E1 /* MYManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYManagedObject.h; sourceTree = "<group>"; };
@@ -150,9 +155,6 @@
 		AB2835C91AC0B9D3002532B9 /* AddReceipts */ = {
 			isa = PBXGroup;
 			children = (
-				AB2835CA1AC0BB16002532B9 /* AddReceiptsViewController.h */,
-				AB2835CB1AC0BB16002532B9 /* AddReceiptsViewController.m */,
-				AB2835CC1AC0BB16002532B9 /* AddReceiptsViewController.xib */,
 				AB2835CF1AC0BB5B002532B9 /* CameraViewController.h */,
 				AB2835D01AC0BB5B002532B9 /* CameraViewController.m */,
 				AB2835D11AC0BB5B002532B9 /* CameraViewController.xib */,
@@ -223,6 +225,12 @@
 				AB9612751ABBAAFB00A145E1 /* SymbolView.m */,
 				ABA5BA3E1AC0E1D500EC5646 /* DragDownAnimator.h */,
 				ABA5BA3F1AC0E1D500EC5646 /* DragDownAnimator.m */,
+				AB8FDDA51AC2A4400087AC86 /* ExpenseDetailViewController.h */,
+				AB8FDDA61AC2A4400087AC86 /* ExpenseDetailViewController.m */,
+				AB8FDDA71AC2A4400087AC86 /* ExpenseDetailViewController.xib */,
+				AB8FDDAA1AC2CA4E0087AC86 /* SimpleExpenseCell.h */,
+				AB8FDDAB1AC2CA4E0087AC86 /* SimpleExpenseCell.m */,
+				AB8FDDAC1AC2CA4E0087AC86 /* SimpleExpenseCell.xib */,
 			);
 			path = ExpenseViewController;
 			sourceTree = "<group>";
@@ -404,9 +412,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8FDDAE1AC2CA4E0087AC86 /* SimpleExpenseCell.xib in Resources */,
 				AB2835D31AC0BB5B002532B9 /* CameraViewController.xib in Resources */,
 				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
-				AB2835CE1AC0BB16002532B9 /* AddReceiptsViewController.xib in Resources */,
+				AB8FDDA91AC2A4400087AC86 /* ExpenseDetailViewController.xib in Resources */,
 				AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */,
 				ABA5BA451AC1008E00EC5646 /* File in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
@@ -476,7 +485,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB96125D1ABA9A3E00A145E1 /* _CDExpense.m in Sources */,
-				AB2835CD1AC0BB16002532B9 /* AddReceiptsViewController.m in Sources */,
 				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
 				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
 				AB9612501ABA9A2400A145E1 /* CDReceipt.m in Sources */,
@@ -484,6 +492,7 @@
 				AB96125F1ABA9A3E00A145E1 /* _CDReceipt.m in Sources */,
 				AB6C85641ABB68F800434690 /* ExpenseSummaryCell.m in Sources */,
 				ABA5BA401AC0E1D500EC5646 /* DragDownAnimator.m in Sources */,
+				AB8FDDA81AC2A4400087AC86 /* ExpenseDetailViewController.m in Sources */,
 				AB9612711ABB80A900A145E1 /* _CDType.m in Sources */,
 				AB9612701ABB80A900A145E1 /* _CDDeductionCategory.m in Sources */,
 				AB96124D1ABA9A2400A145E1 /* CDDocument.m in Sources */,
@@ -494,6 +503,7 @@
 				AB96124E1ABA9A2400A145E1 /* CDExpense.m in Sources */,
 				AB96126B1ABB809300A145E1 /* CDType.m in Sources */,
 				AB96125C1ABA9A3E00A145E1 /* _CDDocument.m in Sources */,
+				AB8FDDAD1AC2CA4E0087AC86 /* SimpleExpenseCell.m in Sources */,
 				ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */,
 				AB9612411ABA907A00A145E1 /* MYManagedObject.m in Sources */,
 				AB9612761ABBAAFB00A145E1 /* SymbolView.m in Sources */,
@@ -626,6 +636,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Products/Debug-iphoneos",
@@ -639,6 +650,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -648,6 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Products/Debug-iphoneos",
@@ -661,6 +674,7 @@
 					"-lstdc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

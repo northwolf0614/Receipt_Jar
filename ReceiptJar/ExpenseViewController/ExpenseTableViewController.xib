@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpenseTableViewController">
             <connections>
+                <outlet property="headerMaskTop" destination="Syh-Nv-yFj" id="OcV-J4-bck"/>
                 <outlet property="tableHeaderView" destination="8h9-T6-Kx1" id="Nyj-F0-sd4"/>
                 <outlet property="tableHeaderViewHeight" destination="dBm-xI-fQH" id="dRc-WS-Qwf"/>
                 <outlet property="tableHeaderViewTop" destination="siz-gN-LdS" id="4Ra-hL-c4o"/>
                 <outlet property="tableView" destination="DPv-Jj-TdD" id="XbB-YA-2QT"/>
                 <outlet property="tableViewBackgroundView" destination="O6E-xk-as2" id="aZr-Hd-ZJO"/>
+                <outlet property="tableViewTop" destination="iz2-gb-Pbw" id="fHj-Sq-QiH"/>
                 <outlet property="view" destination="Qja-Ya-TqR" id="1ge-oD-pus"/>
             </connections>
         </placeholder>
@@ -20,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8h9-T6-Kx1" userLabel="TableHeaderView">
-                    <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                    <rect key="frame" x="0.0" y="64" width="414" height="400"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seb-HI-NBX">
-                            <rect key="frame" x="186" y="89" width="42" height="21"/>
+                            <rect key="frame" x="186" y="189" width="42" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
@@ -32,9 +34,13 @@
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="seb-HI-NBX" secondAttribute="centerX" id="V7k-bh-QTU"/>
-                        <constraint firstAttribute="height" constant="200" id="dBm-xI-fQH"/>
+                        <constraint firstAttribute="height" constant="400" id="dBm-xI-fQH"/>
                         <constraint firstAttribute="centerY" secondItem="seb-HI-NBX" secondAttribute="centerY" id="kGD-p0-w8F"/>
                     </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vLX-vx-6Td" userLabel="HeaderMask">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DPv-Jj-TdD">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -47,13 +53,17 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="vLX-vx-6Td" secondAttribute="trailing" id="8YI-xA-rHB"/>
                 <constraint firstAttribute="trailing" secondItem="DPv-Jj-TdD" secondAttribute="trailing" id="Au7-3U-XEA"/>
+                <constraint firstAttribute="bottom" secondItem="vLX-vx-6Td" secondAttribute="bottom" id="DLc-Ik-abP"/>
+                <constraint firstItem="vLX-vx-6Td" firstAttribute="top" secondItem="Qja-Ya-TqR" secondAttribute="top" id="Syh-Nv-yFj"/>
                 <constraint firstItem="8h9-T6-Kx1" firstAttribute="leading" secondItem="Qja-Ya-TqR" secondAttribute="leading" id="Zlp-Zl-hJ0"/>
                 <constraint firstItem="DPv-Jj-TdD" firstAttribute="top" secondItem="Qja-Ya-TqR" secondAttribute="top" id="iz2-gb-Pbw"/>
                 <constraint firstItem="DPv-Jj-TdD" firstAttribute="leading" secondItem="Qja-Ya-TqR" secondAttribute="leading" id="meq-Po-1Tx"/>
                 <constraint firstAttribute="bottom" secondItem="DPv-Jj-TdD" secondAttribute="bottom" id="rfp-4i-mSm"/>
-                <constraint firstItem="8h9-T6-Kx1" firstAttribute="top" secondItem="Qja-Ya-TqR" secondAttribute="top" constant="44" id="siz-gN-LdS"/>
+                <constraint firstItem="8h9-T6-Kx1" firstAttribute="top" secondItem="Qja-Ya-TqR" secondAttribute="top" constant="64" id="siz-gN-LdS"/>
                 <constraint firstAttribute="trailing" secondItem="8h9-T6-Kx1" secondAttribute="trailing" id="toQ-Se-Ek3"/>
+                <constraint firstItem="vLX-vx-6Td" firstAttribute="leading" secondItem="Qja-Ya-TqR" secondAttribute="leading" id="yf8-9e-0xQ"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
