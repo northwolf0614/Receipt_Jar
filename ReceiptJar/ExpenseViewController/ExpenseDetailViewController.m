@@ -58,7 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 6;
 }
 
 
@@ -67,8 +67,35 @@
     
     // Configure the cell...
     cell.textField.delegate = self;
-    cell.titleLabel.text = @"test";
-    cell.textField.text = @"abcd";
+    
+    switch (indexPath.row) {
+        case 0:
+            cell.titleLabel.text = @"Title";
+            cell.textField.text = self.expense.title;
+            break;
+        case 1:
+            cell.titleLabel.text = @"Date";
+            cell.textField.text = [self.expense.date stringAsFormat:nil];
+            break;
+        case 2:
+            cell.titleLabel.text = @"Amount";
+            cell.textField.text = [NSString stringWithFormat:@"$ %.2f", self.expense.totalAmountValue];
+            break;
+        case 3:
+            cell.titleLabel.text = @"Location";
+            cell.textField.text = self.expense.location;
+            break;
+        case 4:
+            cell.titleLabel.text = @"Category";
+            cell.textField.text = self.expense.deductCategory.name;
+            break;
+        case 5:
+            cell.titleLabel.text = @"Type";
+            cell.textField.text = self.expense.type.name;
+            break;
+        default:
+            break;
+    }
     
     return cell;
 }
