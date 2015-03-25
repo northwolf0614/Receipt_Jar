@@ -28,6 +28,7 @@
 		AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */; };
 		AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C85671ABB6AB500434690 /* CoreDataHelper.m */; };
 		AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85691ABB6D4E00434690 /* TestData.plist */; };
+		AB8BBB3A1AC37E5800E58711 /* TesseractRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8BBB391AC37E5800E58711 /* TesseractRecognizer.m */; };
 		AB8FDDA81AC2A4400087AC86 /* ExpenseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FDDA61AC2A4400087AC86 /* ExpenseDetailViewController.m */; };
 		AB8FDDAD1AC2CA4E0087AC86 /* SimpleExpenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FDDAB1AC2CA4E0087AC86 /* SimpleExpenseCell.m */; };
 		AB8FDDAE1AC2CA4E0087AC86 /* SimpleExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8FDDAC1AC2CA4E0087AC86 /* SimpleExpenseCell.xib */; };
@@ -86,6 +87,8 @@
 		AB6C85661ABB6AB500434690 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		AB6C85671ABB6AB500434690 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		AB6C85691ABB6D4E00434690 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
+		AB8BBB381AC37E5800E58711 /* TesseractRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesseractRecognizer.h; sourceTree = "<group>"; };
+		AB8BBB391AC37E5800E58711 /* TesseractRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesseractRecognizer.m; sourceTree = "<group>"; };
 		AB8FDDA51AC2A4400087AC86 /* ExpenseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseDetailViewController.h; sourceTree = "<group>"; };
 		AB8FDDA61AC2A4400087AC86 /* ExpenseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseDetailViewController.m; sourceTree = "<group>"; };
 		AB8FDDA71AC2A4400087AC86 /* ExpenseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseDetailViewController.xib; sourceTree = "<group>"; };
@@ -591,6 +594,8 @@
 		ABA5BA431AC1007D00EC5646 /* Tesseract */ = {
 			isa = PBXGroup;
 			children = (
+				AB8BBB381AC37E5800E58711 /* TesseractRecognizer.h */,
+				AB8BBB391AC37E5800E58711 /* TesseractRecognizer.m */,
 				E78A220E1AC1090F003AF89D /* G8Constants.h */,
 				E78A220F1AC1090F003AF89D /* G8RecognitionOperation.h */,
 				E78A22101AC1090F003AF89D /* G8RecognitionOperation.m */,
@@ -1227,6 +1232,7 @@
 				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
 				E78A236D1AC10910003AF89D /* G8Tesseract.mm in Sources */,
 				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
+				AB8BBB3A1AC37E5800E58711 /* TesseractRecognizer.m in Sources */,
 				AB9612501ABA9A2400A145E1 /* CDReceipt.m in Sources */,
 				E78A23711AC10910003AF89D /* UIImage+G8Filters.m in Sources */,
 				AB9612641ABA9D7200A145E1 /* ExpenseTableViewController.m in Sources */,

@@ -8,8 +8,9 @@
 
 #import "CameraViewController.h"
 #import "ExpenseDetailViewController.h"
+#import "TesseractRecognizer.h"
 
-@interface CameraViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface CameraViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate>
 
 @end
 
@@ -57,14 +58,31 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     UIImage* image = info[UIImagePickerControllerOriginalImage];
     
-    
     if (image) {
-        ExpenseDetailViewController* detailVC = [[ExpenseDetailViewController alloc] init];
-        NSMutableArray* viewControllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
-        [viewControllers insertObject:detailVC atIndex:[viewControllers indexOfObject:self]];
-        [self.navigationController setViewControllers:viewControllers animated:NO];
         
-        [self.navigationController popViewControllerAnimated:YES];
+        [[TesseractRecognizer sharedRecognizerWithDelegateHolder:self] recognizeImageWithTesseract:image onCompletion:^(NSDictionary *recognizedData) {
+            [recognizedData objectForKey:@"Numbers"];
+            [TesseractRecognizer clearCache];
+            
+            
+            ExpenseDetailViewController* detailVC = [[ExpenseDetailViewController alloc] init];
+            NSMutableArray* viewControllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+            [viewControllers insertObject:detailVC atIndex:[viewControllers indexOfObject:self]];
+            [self.navigationController setViewControllers:viewControllers animated:NO];
+            
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }];
+        
+        
     }
+}
+
+#pragma mark - G8TesseractDelegate
+- (void)progressImageRecognitionForTesseract:(G8Tesseract *)tesseract{
+    
+}
+- (BOOL)shouldCancelImageRecognitionForTesseract:(G8Tesseract *)tesseract{
+    return NO;
 }
 @end
