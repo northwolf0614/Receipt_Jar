@@ -14,6 +14,8 @@
 
 @interface CameraViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate>
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *activityIndicatorWapper;
 @end
 
 @implementation CameraViewController{
@@ -31,6 +33,9 @@
     _imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self.view addSubview:_imagePicker.view];
+    
+    self.activityIndicatorWapper.layer.cornerRadius = 10.0;
+    self.activityIndicatorWapper.clipsToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,11 +47,6 @@
     NSLog(@"dealloc %@.", NSStringFromClass([self class]));
 }
 
-- (IBAction)dismiss:(id)sender {
-    NSLog(@"Dismiss %@", NSStringFromClass([self class]));
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (BOOL)prefersStatusBarHidden{
     return YES;
 }
@@ -54,13 +54,22 @@
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-    [self.navigationController popViewControllerAnimated:YES];
+    if (!self.activityIndicator.isAnimating) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    UIImage* image = info[UIImagePickerControllerOriginalImage];
+    if (self.activityIndicator.isAnimating) {
+        return;
+    }
+    
+    UIImage* image = [info[UIImagePickerControllerOriginalImage] fixRotation];
     
     if (image) {
+        [self.view bringSubviewToFront:self.activityIndicatorWapper];
+        self.activityIndicatorWapper.hidden = NO;
+        [self.activityIndicator startAnimating];
         
         [[TesseractRecognizer sharedRecognizerWithDelegateHolder:self] recognizeImageWithTesseract:image onCompletion:^(NSDictionary *recognizedData) {
             [TesseractRecognizer clearCache];
@@ -81,6 +90,8 @@
             
             [[CoreDataHelper sharedInstance] saveContext];
             
+            [self.activityIndicator stopAnimating];
+            self.activityIndicatorWapper.hidden = YES;
             
             ExpenseDetailViewController* detailVC = [[ExpenseDetailViewController alloc] init];
             detailVC.expense = expense;

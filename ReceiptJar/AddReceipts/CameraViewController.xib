@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraViewController">
             <connections>
+                <outlet property="activityIndicator" destination="qz3-xQ-AWd" id="shg-MG-kkZ"/>
+                <outlet property="activityIndicatorWapper" destination="fZE-kt-GYX" id="aPk-KU-iwy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,28 +16,32 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zD-Tg-TGI">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ju3-RU-o5d">
-                    <rect key="frame" x="184" y="698" width="46" height="30"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="Um6-ur-bN4"/>
-                    </connections>
-                </button>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZE-kt-GYX">
+                    <rect key="frame" x="167" y="328" width="80" height="80"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zB5-Yo-ymW">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qz3-xQ-AWd">
+                                <rect key="frame" x="21" y="22" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="qz3-xQ-AWd" secondAttribute="centerX" id="Ejn-Xw-prh"/>
+                            <constraint firstAttribute="centerY" secondItem="qz3-xQ-AWd" secondAttribute="centerY" id="mT0-N5-Pno"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="pCM-dc-19e"/>
+                        <constraint firstAttribute="width" constant="80" id="t7C-rf-AcH"/>
+                    </constraints>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="9zD-Tg-TGI" secondAttribute="trailing" id="5Fs-VA-eTL"/>
-                <constraint firstAttribute="bottom" secondItem="Ju3-RU-o5d" secondAttribute="bottom" constant="8" id="7Pm-al-qNX"/>
-                <constraint firstItem="Ju3-RU-o5d" firstAttribute="top" secondItem="9zD-Tg-TGI" secondAttribute="bottom" constant="8" id="A3J-hF-3FL"/>
-                <constraint firstItem="9zD-Tg-TGI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SHb-JB-DDK"/>
-                <constraint firstAttribute="centerX" secondItem="Ju3-RU-o5d" secondAttribute="centerX" id="Wn8-7k-HS6"/>
-                <constraint firstItem="9zD-Tg-TGI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XGD-bd-SDF"/>
+                <constraint firstAttribute="centerX" secondItem="fZE-kt-GYX" secondAttribute="centerX" id="eee-Fj-TtZ"/>
+                <constraint firstAttribute="centerY" secondItem="fZE-kt-GYX" secondAttribute="centerY" id="qbU-Sf-9MM"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="311" y="265"/>

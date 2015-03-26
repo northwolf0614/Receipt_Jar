@@ -10,5 +10,4 @@
 
 @interface CameraViewController : UIViewController
 
-- (IBAction)dismiss:(id)sender;
 @end
