@@ -129,26 +129,38 @@ const CGFloat DRAG_THRESHOLD = 200;
     return cell;
 }
 
-
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView beginUpdates];
+        
+        if ([_expenses[_sectionKeys[indexPath.section]] count] == 1) {
+            [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        else{
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        
+        CDExpense* exp = _expenses[_sectionKeys[indexPath.section]][indexPath.row];
+        [[[CoreDataHelper sharedInstance] moc] deleteObject:exp];
+        [[CoreDataHelper sharedInstance] saveContext];
+        
+        [self groupExpenseByMonth];
+        
+        [tableView endUpdates];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
@@ -188,6 +200,10 @@ const CGFloat DRAG_THRESHOLD = 200;
     detailVC.expense = exp;
     
     [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete;
 }
 
 #pragma mark - UINavigationControllerDelegate
