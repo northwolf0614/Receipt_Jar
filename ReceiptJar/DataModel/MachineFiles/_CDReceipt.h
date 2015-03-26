@@ -4,6 +4,10 @@
 #import <CoreData/CoreData.h>
 #import "MYManagedObject.h"
 
+extern const struct CDReceiptAttributes {
+	__unsafe_unretained NSString *rawData;
+} CDReceiptAttributes;
+
 extern const struct CDReceiptRelationships {
 	__unsafe_unretained NSString *documents;
 	__unsafe_unretained NSString *expense;
@@ -11,6 +15,8 @@ extern const struct CDReceiptRelationships {
 
 @class CDDocument;
 @class CDExpense;
+
+@class NSDictionary;
 
 @interface CDReceiptID : NSManagedObjectID {}
 @end
@@ -20,6 +26,10 @@ extern const struct CDReceiptRelationships {
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) CDReceiptID* objectID;
+
+@property (nonatomic, strong) NSDictionary* rawData;
+
+//- (BOOL)validateRawData:(id*)value_ error:(NSError**)error_;
 
 @property (nonatomic, strong) NSSet *documents;
 
@@ -40,6 +50,9 @@ extern const struct CDReceiptRelationships {
 @end
 
 @interface _CDReceipt (CoreDataGeneratedPrimitiveAccessors)
+
+- (NSDictionary*)primitiveRawData;
+- (void)setPrimitiveRawData:(NSDictionary*)value;
 
 - (NSMutableSet*)primitiveDocuments;
 - (void)setPrimitiveDocuments:(NSMutableSet*)value;

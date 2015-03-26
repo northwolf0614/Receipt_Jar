@@ -9,6 +9,8 @@
 #import "CameraViewController.h"
 #import "ExpenseDetailViewController.h"
 #import "TesseractRecognizer.h"
+#import "CoreDataEntityHeaders.h"
+#import "CoreDataHelper.h"
 
 @interface CameraViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate>
 
@@ -61,11 +63,27 @@
     if (image) {
         
         [[TesseractRecognizer sharedRecognizerWithDelegateHolder:self] recognizeImageWithTesseract:image onCompletion:^(NSDictionary *recognizedData) {
-            [recognizedData objectForKey:@"Numbers"];
             [TesseractRecognizer clearCache];
+            
+            CDDocument* document = [CDDocument insertInManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
+            document.file = UIImageJPEGRepresentation(image, 1.0);
+            
+            CDReceipt* receipt = [CDReceipt insertInManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
+            [receipt addDocumentsObject:document];
+            receipt.rawData = recognizedData;
+            
+            CDExpense* expense = [CDExpense insertInManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
+            [expense addReceiptsObject:receipt];
+            expense.date = [NSDate date];
+            
+            [receipt setupRawData];
+            
+            
+            [[CoreDataHelper sharedInstance] saveContext];
             
             
             ExpenseDetailViewController* detailVC = [[ExpenseDetailViewController alloc] init];
+            detailVC.expense = expense;
             NSMutableArray* viewControllers = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
             [viewControllers insertObject:detailVC atIndex:[viewControllers indexOfObject:self]];
             [self.navigationController setViewControllers:viewControllers animated:NO];

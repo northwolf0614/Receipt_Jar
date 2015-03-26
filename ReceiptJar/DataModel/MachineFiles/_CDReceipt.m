@@ -3,6 +3,10 @@
 
 #import "_CDReceipt.h"
 
+const struct CDReceiptAttributes CDReceiptAttributes = {
+	.rawData = @"rawData",
+};
+
 const struct CDReceiptRelationships CDReceiptRelationships = {
 	.documents = @"documents",
 	.expense = @"expense",
@@ -36,6 +40,8 @@ const struct CDReceiptRelationships CDReceiptRelationships = {
 
 	return keyPaths;
 }
+
+@dynamic rawData;
 
 @dynamic documents;
 
