@@ -28,6 +28,10 @@
 		AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85631ABB68F800434690 /* ExpenseSummaryCell.xib */; };
 		AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6C85671ABB6AB500434690 /* CoreDataHelper.m */; };
 		AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB6C85691ABB6D4E00434690 /* TestData.plist */; };
+		AB81F5341AC3C84200698C5C /* PhotoExpenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB81F5321AC3C84200698C5C /* PhotoExpenseCell.m */; };
+		AB81F5351AC3C84200698C5C /* PhotoExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB81F5331AC3C84200698C5C /* PhotoExpenseCell.xib */; };
+		AB81F5391AC3D2CE00698C5C /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB81F5371AC3D2CE00698C5C /* PhotoCollectionViewCell.m */; };
+		AB81F53A1AC3D2CE00698C5C /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB81F5381AC3D2CE00698C5C /* PhotoCollectionViewCell.xib */; };
 		AB8BBB3A1AC37E5800E58711 /* TesseractRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8BBB391AC37E5800E58711 /* TesseractRecognizer.m */; };
 		AB8FDDA81AC2A4400087AC86 /* ExpenseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FDDA61AC2A4400087AC86 /* ExpenseDetailViewController.m */; };
 		AB8FDDAD1AC2CA4E0087AC86 /* SimpleExpenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8FDDAB1AC2CA4E0087AC86 /* SimpleExpenseCell.m */; };
@@ -87,6 +91,12 @@
 		AB6C85661ABB6AB500434690 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		AB6C85671ABB6AB500434690 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		AB6C85691ABB6D4E00434690 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
+		AB81F5311AC3C84200698C5C /* PhotoExpenseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoExpenseCell.h; sourceTree = "<group>"; };
+		AB81F5321AC3C84200698C5C /* PhotoExpenseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoExpenseCell.m; sourceTree = "<group>"; };
+		AB81F5331AC3C84200698C5C /* PhotoExpenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoExpenseCell.xib; sourceTree = "<group>"; };
+		AB81F5361AC3D2CE00698C5C /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		AB81F5371AC3D2CE00698C5C /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		AB81F5381AC3D2CE00698C5C /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		AB8BBB381AC37E5800E58711 /* TesseractRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TesseractRecognizer.h; sourceTree = "<group>"; };
 		AB8BBB391AC37E5800E58711 /* TesseractRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TesseractRecognizer.m; sourceTree = "<group>"; };
 		AB8FDDA51AC2A4400087AC86 /* ExpenseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseDetailViewController.h; sourceTree = "<group>"; };
@@ -518,6 +528,19 @@
 			path = AddReceipts;
 			sourceTree = "<group>";
 		};
+		AB81F5301AC3C7F800698C5C /* PhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				AB81F5311AC3C84200698C5C /* PhotoExpenseCell.h */,
+				AB81F5321AC3C84200698C5C /* PhotoExpenseCell.m */,
+				AB81F5331AC3C84200698C5C /* PhotoExpenseCell.xib */,
+				AB81F5361AC3D2CE00698C5C /* PhotoCollectionViewCell.h */,
+				AB81F5371AC3D2CE00698C5C /* PhotoCollectionViewCell.m */,
+				AB81F5381AC3D2CE00698C5C /* PhotoCollectionViewCell.xib */,
+			);
+			name = PhotoCell;
+			sourceTree = "<group>";
+		};
 		AB9612331ABA532900A145E1 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -571,6 +594,7 @@
 		AB9612601ABA9D5000A145E1 /* ExpenseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AB81F5301AC3C7F800698C5C /* PhotoCell */,
 				AB9612611ABA9D7200A145E1 /* ExpenseTableViewController.h */,
 				AB9612621ABA9D7200A145E1 /* ExpenseTableViewController.m */,
 				AB9612631ABA9D7200A145E1 /* ExpenseTableViewController.xib */,
@@ -1161,7 +1185,9 @@
 				AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
 				AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */,
+				AB81F5351AC3C84200698C5C /* PhotoExpenseCell.xib in Resources */,
 				ABCEE8E11AC2DB55001CB3C2 /* ExpenseDetailViewController.xib in Resources */,
+				AB81F53A1AC3D2CE00698C5C /* PhotoCollectionViewCell.xib in Resources */,
 				AB9612651ABA9D7200A145E1 /* ExpenseTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1231,6 +1257,7 @@
 				AB96125D1ABA9A3E00A145E1 /* _CDExpense.m in Sources */,
 				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
 				E78A236D1AC10910003AF89D /* G8Tesseract.mm in Sources */,
+				AB81F5341AC3C84200698C5C /* PhotoExpenseCell.m in Sources */,
 				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
 				AB8BBB3A1AC37E5800E58711 /* TesseractRecognizer.m in Sources */,
 				AB9612501ABA9A2400A145E1 /* CDReceipt.m in Sources */,
@@ -1248,6 +1275,7 @@
 				AB96126A1ABB809300A145E1 /* CDDeductionCategory.m in Sources */,
 				AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */,
 				AB96124E1ABA9A2400A145E1 /* CDExpense.m in Sources */,
+				AB81F5391AC3D2CE00698C5C /* PhotoCollectionViewCell.m in Sources */,
 				E78A236C1AC10910003AF89D /* G8RecognizedBlock.m in Sources */,
 				AB96126B1ABB809300A145E1 /* CDType.m in Sources */,
 				AB96125C1ABA9A3E00A145E1 /* _CDDocument.m in Sources */,

@@ -11,6 +11,7 @@
 #import "CoreDataHelper.h"
 #import "CameraViewController.h"
 #import "SimpleExpenseCell.h"
+#import "PhotoExpenseCell.h"
 
 @interface ExpenseDetailViewController ()
 
@@ -29,6 +30,7 @@
     
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SimpleExpenseCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SimpleExpenseCell class])];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PhotoExpenseCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([PhotoExpenseCell class])];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -51,6 +53,13 @@
 
 #pragma mark - Table view data source
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 6) {
+        return 224.0;
+    }
+    return UITableViewAutomaticDimension;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -58,41 +67,54 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 6;
+    return 7;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SimpleExpenseCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SimpleExpenseCell class]) forIndexPath:indexPath];
+    UITableViewCell *cell;
+    switch (indexPath.row) {
+        case 6:
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PhotoExpenseCell class]) forIndexPath:indexPath];
+            break;
+        default:
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SimpleExpenseCell class]) forIndexPath:indexPath];
+            break;
+    }
     
     // Configure the cell...
-    cell.textField.delegate = self;
+    if ([cell isKindOfClass:[SimpleExpenseCell class]]) {
+        ((SimpleExpenseCell*)cell).textField.delegate = self;
+    }
     
     switch (indexPath.row) {
         case 0:
-            cell.titleLabel.text = @"Title";
-            cell.textField.text = self.expense.title;
+            ((SimpleExpenseCell*)cell).titleLabel.text = @"Title";
+            ((SimpleExpenseCell*)cell).textField.text = self.expense.title;
             break;
         case 1:
-            cell.titleLabel.text = @"Date";
-            cell.textField.text = [self.expense.date stringAsFormat:nil];
+            ((SimpleExpenseCell*)cell).titleLabel.text = @"Date";
+            ((SimpleExpenseCell*)cell).textField.text = [self.expense.date stringAsFormat:nil];
             break;
         case 2:
-            cell.titleLabel.text = @"Amount";
-            cell.textField.text = [NSString stringWithFormat:@"$ %.2f", self.expense.totalAmountValue];
+            ((SimpleExpenseCell*)cell).titleLabel.text = @"Amount";
+            ((SimpleExpenseCell*)cell).textField.text = [NSString stringWithFormat:@"$ %.2f", self.expense.totalAmountValue];
             break;
         case 3:
-            cell.titleLabel.text = @"Location";
-            cell.textField.text = self.expense.location;
+            ((SimpleExpenseCell*)cell).titleLabel.text = @"Location";
+            ((SimpleExpenseCell*)cell).textField.text = self.expense.location;
             break;
         case 4:
-            cell.titleLabel.text = @"Category";
-            cell.textField.text = self.expense.deductCategory.name;
+            ((SimpleExpenseCell*)cell).titleLabel.text = @"Category";
+            ((SimpleExpenseCell*)cell).textField.text = self.expense.deductCategory.name;
             break;
         case 5:
-            cell.titleLabel.text = @"Type";
-            cell.textField.text = self.expense.type.name;
+            ((SimpleExpenseCell*)cell).titleLabel.text = @"Type";
+            ((SimpleExpenseCell*)cell).textField.text = self.expense.type.name;
             break;
+        case 6:
+            ((PhotoExpenseCell*)cell).titleLabel.text = @"Receipts";
+            ((PhotoExpenseCell*)cell).expense = self.expense;
         default:
             break;
     }
