@@ -67,6 +67,7 @@
 		E78A23701AC10910003AF89D /* libtesseract_all.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E78A23671AC10910003AF89D /* libtesseract_all.a */; };
 		E78A23711AC10910003AF89D /* UIImage+G8Filters.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A236A1AC10910003AF89D /* UIImage+G8Filters.m */; };
 		E78A23731AC10934003AF89D /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = E78A23721AC10934003AF89D /* tessdata */; };
+		E7FAD3CA1AC8AC4A0084AF26 /* ReceiptPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FAD3C91AC8AC4A0084AF26 /* ReceiptPattern.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -495,6 +496,9 @@
 		E78A23691AC10910003AF89D /* UIImage+G8Filters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+G8Filters.h"; sourceTree = "<group>"; };
 		E78A236A1AC10910003AF89D /* UIImage+G8Filters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+G8Filters.m"; sourceTree = "<group>"; };
 		E78A23721AC10934003AF89D /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = Tesseract/tessdata; sourceTree = "<group>"; };
+		E7FAD3C71AC8AC4A0084AF26 /* Patterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patterns.h; sourceTree = "<group>"; };
+		E7FAD3C81AC8AC4A0084AF26 /* ReceiptPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptPattern.h; sourceTree = "<group>"; };
+		E7FAD3C91AC8AC4A0084AF26 /* ReceiptPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptPattern.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -618,6 +622,9 @@
 		ABA5BA431AC1007D00EC5646 /* Tesseract */ = {
 			isa = PBXGroup;
 			children = (
+				E7FAD3C71AC8AC4A0084AF26 /* Patterns.h */,
+				E7FAD3C81AC8AC4A0084AF26 /* ReceiptPattern.h */,
+				E7FAD3C91AC8AC4A0084AF26 /* ReceiptPattern.m */,
 				AB8BBB381AC37E5800E58711 /* TesseractRecognizer.h */,
 				AB8BBB391AC37E5800E58711 /* TesseractRecognizer.m */,
 				E78A220E1AC1090F003AF89D /* G8Constants.h */,
@@ -1145,10 +1152,11 @@
 					};
 					ABB2316A1ABA49B500B5447D = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 5P2S2MGCFY;
+						DevelopmentTeam = FR688XR96P;
 					};
 					ABB231861ABA49B500B5447D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = FR688XR96P;
 						TestTargetID = ABB2316A1ABA49B500B5447D;
 					};
 				};
@@ -1273,6 +1281,7 @@
 				ABB231711ABA49B500B5447D /* main.m in Sources */,
 				AB2835D21AC0BB5B002532B9 /* CameraViewController.m in Sources */,
 				AB96126A1ABB809300A145E1 /* CDDeductionCategory.m in Sources */,
+				E7FAD3CA1AC8AC4A0084AF26 /* ReceiptPattern.m in Sources */,
 				AB6C85681ABB6AB500434690 /* CoreDataHelper.m in Sources */,
 				AB96124E1ABA9A2400A145E1 /* CDExpense.m in Sources */,
 				AB81F5391AC3D2CE00698C5C /* PhotoCollectionViewCell.m in Sources */,
