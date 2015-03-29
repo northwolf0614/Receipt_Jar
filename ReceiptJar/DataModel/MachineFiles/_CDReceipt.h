@@ -31,9 +31,9 @@ extern const struct CDReceiptRelationships {
 
 //- (BOOL)validateRawData:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSSet *documents;
+@property (nonatomic, strong) NSOrderedSet *documents;
 
-- (NSMutableSet*)documentsSet;
+- (NSMutableOrderedSet*)documentsSet;
 
 @property (nonatomic, strong) CDExpense *expense;
 
@@ -42,10 +42,17 @@ extern const struct CDReceiptRelationships {
 @end
 
 @interface _CDReceipt (DocumentsCoreDataGeneratedAccessors)
-- (void)addDocuments:(NSSet*)value_;
-- (void)removeDocuments:(NSSet*)value_;
+- (void)addDocuments:(NSOrderedSet*)value_;
+- (void)removeDocuments:(NSOrderedSet*)value_;
 - (void)addDocumentsObject:(CDDocument*)value_;
 - (void)removeDocumentsObject:(CDDocument*)value_;
+
+- (void)insertObject:(CDDocument*)value inDocumentsAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromDocumentsAtIndex:(NSUInteger)idx;
+- (void)insertDocuments:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeDocumentsAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInDocumentsAtIndex:(NSUInteger)idx withObject:(CDDocument*)value;
+- (void)replaceDocumentsAtIndexes:(NSIndexSet *)indexes withDocuments:(NSArray *)values;
 
 @end
 
@@ -54,8 +61,8 @@ extern const struct CDReceiptRelationships {
 - (NSDictionary*)primitiveRawData;
 - (void)setPrimitiveRawData:(NSDictionary*)value;
 
-- (NSMutableSet*)primitiveDocuments;
-- (void)setPrimitiveDocuments:(NSMutableSet*)value;
+- (NSMutableOrderedSet*)primitiveDocuments;
+- (void)setPrimitiveDocuments:(NSMutableOrderedSet*)value;
 
 - (CDExpense*)primitiveExpense;
 - (void)setPrimitiveExpense:(CDExpense*)value;

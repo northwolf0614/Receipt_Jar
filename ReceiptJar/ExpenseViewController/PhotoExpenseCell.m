@@ -36,13 +36,15 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return [self.expense.receipts count];
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     PhotoCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([PhotoCollectionViewCell class]) forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor redColor];
+    CDReceipt* receipt = self.expense.receipts[indexPath.item];
+    
+    cell.imageView.image = [receipt.documents[0] image];
     
     return cell;
 }
@@ -50,6 +52,13 @@
 #pragma mark - UICollectionViewDelegateFlowLayout{
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(100, 200);
+    CDReceipt* receipt = self.expense.receipts[indexPath.item];
+    CDDocument* doc = receipt.documents[0];
+    
+    CGFloat x = (200.0 - ((UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout).minimumLineSpacing * 2.0) / doc.image.size.width;
+    CGFloat y = (200.0 - ((UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout).minimumLineSpacing * 2.0) / doc.image.size.height;
+    CGFloat r = MAX(x, y);
+    
+    return CGSizeMake(r * doc.image.size.width, r * doc.image.size.height);
 }
 @end

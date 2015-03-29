@@ -23,7 +23,7 @@
         <attribute name="totalAmount" optional="YES" attributeType="Float" syncable="YES"/>
         <attribute name="workRelatedPortion" optional="YES" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="1" syncable="YES"/>
         <relationship name="deductCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDDeductionCategory" inverseName="expenses" inverseEntity="CDDeductionCategory" syncable="YES"/>
-        <relationship name="receipts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDReceipt" inverseName="expense" inverseEntity="CDReceipt" syncable="YES"/>
+        <relationship name="receipts" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDReceipt" inverseName="expense" inverseEntity="CDReceipt" syncable="YES"/>
         <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDType" inverseName="expenses" inverseEntity="CDType" syncable="YES"/>
     </entity>
     <entity name="CDReceipt" representedClassName="CDReceipt" syncable="YES">
@@ -32,7 +32,7 @@
                 <entry key="attributeValueClassName" value="NSDictionary"/>
             </userInfo>
         </attribute>
-        <relationship name="documents" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CDDocument" inverseName="receipt" inverseEntity="CDDocument" syncable="YES"/>
+        <relationship name="documents" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDDocument" inverseName="receipt" inverseEntity="CDDocument" syncable="YES"/>
         <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDExpense" inverseName="receipts" inverseEntity="CDExpense" syncable="YES"/>
     </entity>
     <entity name="CDType" representedClassName="CDType" syncable="YES">
@@ -48,7 +48,7 @@
     <elements>
         <element name="CDDeductionCategory" positionX="-54" positionY="-297" width="128" height="88"/>
         <element name="CDDocument" positionX="124" positionY="-72" width="128" height="73"/>
-        <element name="CDExpense" positionX="-243" positionY="-280" width="128" height="210"/>
+        <element name="CDExpense" positionX="-243" positionY="-280" width="128" height="208"/>
         <element name="CDReceipt" positionX="-74" positionY="-63" width="128" height="88"/>
         <element name="CDType" positionX="-20" positionY="-180" width="128" height="103"/>
     </elements>

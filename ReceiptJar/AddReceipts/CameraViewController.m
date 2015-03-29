@@ -75,7 +75,7 @@
             [TesseractRecognizer clearCache];
             
             CDDocument* document = [CDDocument insertInManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
-            document.file = UIImageJPEGRepresentation(image, 1.0);
+            document.image = image;
             
             CDReceipt* receipt = [CDReceipt insertInManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
             [receipt addDocumentsObject:document];

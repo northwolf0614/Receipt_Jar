@@ -82,9 +82,9 @@ extern const struct CDExpenseRelationships {
 
 //- (BOOL)validateDeductCategory:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSSet *receipts;
+@property (nonatomic, strong) NSOrderedSet *receipts;
 
-- (NSMutableSet*)receiptsSet;
+- (NSMutableOrderedSet*)receiptsSet;
 
 @property (nonatomic, strong) CDType *type;
 
@@ -93,10 +93,17 @@ extern const struct CDExpenseRelationships {
 @end
 
 @interface _CDExpense (ReceiptsCoreDataGeneratedAccessors)
-- (void)addReceipts:(NSSet*)value_;
-- (void)removeReceipts:(NSSet*)value_;
+- (void)addReceipts:(NSOrderedSet*)value_;
+- (void)removeReceipts:(NSOrderedSet*)value_;
 - (void)addReceiptsObject:(CDReceipt*)value_;
 - (void)removeReceiptsObject:(CDReceipt*)value_;
+
+- (void)insertObject:(CDReceipt*)value inReceiptsAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromReceiptsAtIndex:(NSUInteger)idx;
+- (void)insertReceipts:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeReceiptsAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInReceiptsAtIndex:(NSUInteger)idx withObject:(CDReceipt*)value;
+- (void)replaceReceiptsAtIndexes:(NSIndexSet *)indexes withReceipts:(NSArray *)values;
 
 @end
 
@@ -138,8 +145,8 @@ extern const struct CDExpenseRelationships {
 - (CDDeductionCategory*)primitiveDeductCategory;
 - (void)setPrimitiveDeductCategory:(CDDeductionCategory*)value;
 
-- (NSMutableSet*)primitiveReceipts;
-- (void)setPrimitiveReceipts:(NSMutableSet*)value;
+- (NSMutableOrderedSet*)primitiveReceipts;
+- (void)setPrimitiveReceipts:(NSMutableOrderedSet*)value;
 
 - (CDType*)primitiveType;
 - (void)setPrimitiveType:(CDType*)value;
