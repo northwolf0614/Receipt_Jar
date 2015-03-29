@@ -38,6 +38,8 @@
 	<key>types</key>
 	<array>
 		<dict>
+			<key>sortIndex</key>
+			<integer>0</integer>
 			<key>color</key>
 			<string>255,186,0</string>
 			<key>name</key>
@@ -46,6 +48,8 @@
 			<string>C</string>
 		</dict>
 		<dict>
+			<key>sortIndex</key>
+			<integer>1</integer>
 			<key>color</key>
 			<string>255,0,0</string>
 			<key>name</key>
@@ -54,6 +58,8 @@
 			<string>R</string>
 		</dict>
 		<dict>
+			<key>sortIndex</key>
+			<integer>2</integer>
 			<key>color</key>
 			<string>129,130,101</string>
 			<key>name</key>

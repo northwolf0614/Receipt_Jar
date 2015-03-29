@@ -7,6 +7,7 @@
 extern const struct CDDeductionCategoryAttributes {
 	__unsafe_unretained NSString *color;
 	__unsafe_unretained NSString *name;
+	__unsafe_unretained NSString *sortIndex;
 } CDDeductionCategoryAttributes;
 
 extern const struct CDDeductionCategoryRelationships {
@@ -34,6 +35,14 @@ extern const struct CDDeductionCategoryRelationships {
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSNumber* sortIndex;
+
+@property (atomic) int32_t sortIndexValue;
+- (int32_t)sortIndexValue;
+- (void)setSortIndexValue:(int32_t)value_;
+
+//- (BOOL)validateSortIndex:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) NSSet *expenses;
 
 - (NSMutableSet*)expensesSet;
@@ -55,6 +64,12 @@ extern const struct CDDeductionCategoryRelationships {
 
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
+
+- (NSNumber*)primitiveSortIndex;
+- (void)setPrimitiveSortIndex:(NSNumber*)value;
+
+- (int32_t)primitiveSortIndexValue;
+- (void)setPrimitiveSortIndexValue:(int32_t)value_;
 
 - (NSMutableSet*)primitiveExpenses;
 - (void)setPrimitiveExpenses:(NSMutableSet*)value;

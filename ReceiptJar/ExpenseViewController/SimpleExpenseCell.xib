@@ -43,7 +43,7 @@
                 <outlet property="textField" destination="708-Ol-ELr" id="qsi-0Z-VS7"/>
                 <outlet property="titleLabel" destination="gSq-Tw-8Te" id="hk4-2g-z2r"/>
             </connections>
-            <point key="canvasLocation" x="244" y="245"/>
+            <point key="canvasLocation" x="85" y="269"/>
         </tableViewCell>
     </objects>
 </document>

@@ -9,9 +9,12 @@
 #import "ExpenseDetailViewController.h"
 #import "Constants.h"
 #import "CoreDataHelper.h"
+#import "CoreDataEntityHeaders.h"
+#import "MYManagedObject.h"
 #import "CameraViewController.h"
 #import "SimpleExpenseCell.h"
 #import "PhotoExpenseCell.h"
+#import "SegmentedExpenseCell.h"
 
 @interface ExpenseDetailViewController ()
 
@@ -20,10 +23,13 @@
 @implementation ExpenseDetailViewController{
     UITapGestureRecognizer* _tap;
     UITextField* _currentTextField;
+    NSArray* _allTypes;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _allTypes = [CDType fetchAllWithSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:CDTypeAttributes.sortIndex ascending:YES]] inManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
     
     _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnScreen)];
     [self.tableView addGestureRecognizer:_tap];
@@ -31,6 +37,7 @@
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SimpleExpenseCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SimpleExpenseCell class])];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PhotoExpenseCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([PhotoExpenseCell class])];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SegmentedExpenseCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SegmentedExpenseCell class])];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -74,6 +81,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
     switch (indexPath.row) {
+        case 5:
+            cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SegmentedExpenseCell class]) forIndexPath:indexPath];
+            break;
         case 6:
             cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PhotoExpenseCell class]) forIndexPath:indexPath];
             break;
@@ -109,8 +119,16 @@
             ((SimpleExpenseCell*)cell).textField.text = self.expense.deductCategory.name;
             break;
         case 5:
-            ((SimpleExpenseCell*)cell).titleLabel.text = @"Type";
-            ((SimpleExpenseCell*)cell).textField.text = self.expense.type.name;
+        {
+            ((SegmentedExpenseCell*)cell).titleLabel.text = @"Type";
+            [((SegmentedExpenseCell*)cell).segmentedControl removeAllSegments];
+            [_allTypes enumerateObjectsUsingBlock:^(CDType* type, NSUInteger idx, BOOL* stop){
+                [((SegmentedExpenseCell*)cell).segmentedControl insertSegmentWithTitle:type.name atIndex:idx animated:NO];
+                if ([self.expense.type isEqual:type]) {
+                    ((SegmentedExpenseCell*)cell).segmentedControl.selectedSegmentIndex = idx;
+                }
+            }];
+        }
             break;
         case 6:
             ((PhotoExpenseCell*)cell).titleLabel.text = @"Receipts";

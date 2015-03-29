@@ -10,4 +10,6 @@
 
 @interface MYManagedObject : NSManagedObject
 
++ (NSString*)entityName;
++ (NSArray*)fetchAllWithSortDescriptors:(NSArray*)sortDescriptors inManagedObjectContext:(NSManagedObjectContext*)moc;
 @end

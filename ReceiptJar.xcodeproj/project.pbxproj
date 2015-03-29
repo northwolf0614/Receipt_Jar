@@ -59,6 +59,8 @@
 		ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABB231801ABA49B500B5447D /* LaunchScreen.xib */; };
 		ABB2318E1ABA49B600B5447D /* ReceiptJarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */; };
 		ABCEE8E11AC2DB55001CB3C2 /* ExpenseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8FDDA71AC2A4400087AC86 /* ExpenseDetailViewController.xib */; };
+		ABD73FF51AC8AAE90012D42B /* SegmentedExpenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD73FF31AC8AAE90012D42B /* SegmentedExpenseCell.m */; };
+		ABD73FF61AC8AAE90012D42B /* SegmentedExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABD73FF41AC8AAE90012D42B /* SegmentedExpenseCell.xib */; };
 		E78A236B1AC10910003AF89D /* G8RecognitionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A22101AC1090F003AF89D /* G8RecognitionOperation.m */; };
 		E78A236C1AC10910003AF89D /* G8RecognizedBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A22121AC1090F003AF89D /* G8RecognizedBlock.m */; };
 		E78A236D1AC10910003AF89D /* G8Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = E78A22141AC1090F003AF89D /* G8Tesseract.mm */; };
@@ -149,6 +151,9 @@
 		ABB231871ABA49B500B5447D /* ReceiptJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB2318C1ABA49B600B5447D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB2318D1ABA49B600B5447D /* ReceiptJarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiptJarTests.m; sourceTree = "<group>"; };
+		ABD73FF21AC8AAE90012D42B /* SegmentedExpenseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedExpenseCell.h; sourceTree = "<group>"; };
+		ABD73FF31AC8AAE90012D42B /* SegmentedExpenseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedExpenseCell.m; sourceTree = "<group>"; };
+		ABD73FF41AC8AAE90012D42B /* SegmentedExpenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedExpenseCell.xib; sourceTree = "<group>"; };
 		ABEFCF2769A143F725102BCC /* libPods-ReceiptJar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReceiptJar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78A220E1AC1090F003AF89D /* G8Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G8Constants.h; sourceTree = "<group>"; };
 		E78A220F1AC1090F003AF89D /* G8RecognitionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G8RecognitionOperation.h; sourceTree = "<group>"; };
@@ -611,6 +616,9 @@
 				AB8FDDAA1AC2CA4E0087AC86 /* SimpleExpenseCell.h */,
 				AB8FDDAB1AC2CA4E0087AC86 /* SimpleExpenseCell.m */,
 				AB8FDDAC1AC2CA4E0087AC86 /* SimpleExpenseCell.xib */,
+				ABD73FF21AC8AAE90012D42B /* SegmentedExpenseCell.h */,
+				ABD73FF31AC8AAE90012D42B /* SegmentedExpenseCell.m */,
+				ABD73FF41AC8AAE90012D42B /* SegmentedExpenseCell.xib */,
 			);
 			path = ExpenseViewController;
 			sourceTree = "<group>";
@@ -1183,6 +1191,7 @@
 				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
 				E78A23731AC10934003AF89D /* tessdata in Resources */,
 				AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */,
+				ABD73FF61AC8AAE90012D42B /* SegmentedExpenseCell.xib in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
 				AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */,
 				AB81F5351AC3C84200698C5C /* PhotoExpenseCell.xib in Resources */,
@@ -1257,6 +1266,7 @@
 				AB96125D1ABA9A3E00A145E1 /* _CDExpense.m in Sources */,
 				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
 				E78A236D1AC10910003AF89D /* G8Tesseract.mm in Sources */,
+				ABD73FF51AC8AAE90012D42B /* SegmentedExpenseCell.m in Sources */,
 				AB81F5341AC3C84200698C5C /* PhotoExpenseCell.m in Sources */,
 				ABB231741ABA49B500B5447D /* AppDelegate.m in Sources */,
 				AB8BBB3A1AC37E5800E58711 /* TesseractRecognizer.m in Sources */,

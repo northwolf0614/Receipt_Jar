@@ -7,6 +7,7 @@
             </userInfo>
         </attribute>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="CDExpense" inverseName="deductCategory" inverseEntity="CDExpense" syncable="YES"/>
     </entity>
     <entity name="CDDocument" representedClassName="CDDocument" syncable="YES">
@@ -42,14 +43,15 @@
             </userInfo>
         </attribute>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="symbolLetter" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="CDExpense" inverseName="type" inverseEntity="CDExpense" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDDeductionCategory" positionX="-54" positionY="-297" width="128" height="88"/>
+        <element name="CDDeductionCategory" positionX="-54" positionY="-297" width="128" height="105"/>
         <element name="CDDocument" positionX="124" positionY="-72" width="128" height="73"/>
         <element name="CDExpense" positionX="-243" positionY="-280" width="128" height="208"/>
         <element name="CDReceipt" positionX="-74" positionY="-63" width="128" height="88"/>
-        <element name="CDType" positionX="-20" positionY="-180" width="128" height="103"/>
+        <element name="CDType" positionX="-20" positionY="-180" width="128" height="120"/>
     </elements>
 </model>

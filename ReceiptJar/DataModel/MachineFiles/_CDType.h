@@ -7,6 +7,7 @@
 extern const struct CDTypeAttributes {
 	__unsafe_unretained NSString *color;
 	__unsafe_unretained NSString *name;
+	__unsafe_unretained NSString *sortIndex;
 	__unsafe_unretained NSString *symbolLetter;
 } CDTypeAttributes;
 
@@ -35,6 +36,14 @@ extern const struct CDTypeRelationships {
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSNumber* sortIndex;
+
+@property (atomic) int32_t sortIndexValue;
+- (int32_t)sortIndexValue;
+- (void)setSortIndexValue:(int32_t)value_;
+
+//- (BOOL)validateSortIndex:(id*)value_ error:(NSError**)error_;
+
 @property (nonatomic, strong) NSString* symbolLetter;
 
 //- (BOOL)validateSymbolLetter:(id*)value_ error:(NSError**)error_;
@@ -60,6 +69,12 @@ extern const struct CDTypeRelationships {
 
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
+
+- (NSNumber*)primitiveSortIndex;
+- (void)setPrimitiveSortIndex:(NSNumber*)value;
+
+- (int32_t)primitiveSortIndexValue;
+- (void)setPrimitiveSortIndexValue:(int32_t)value_;
 
 - (NSString*)primitiveSymbolLetter;
 - (void)setPrimitiveSymbolLetter:(NSString*)value;

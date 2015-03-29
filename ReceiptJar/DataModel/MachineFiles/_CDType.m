@@ -6,6 +6,7 @@
 const struct CDTypeAttributes CDTypeAttributes = {
 	.color = @"color",
 	.name = @"name",
+	.sortIndex = @"sortIndex",
 	.symbolLetter = @"symbolLetter",
 };
 
@@ -39,12 +40,38 @@ const struct CDTypeRelationships CDTypeRelationships = {
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 
+	if ([key isEqualToString:@"sortIndexValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"sortIndex"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
+
 	return keyPaths;
 }
 
 @dynamic color;
 
 @dynamic name;
+
+@dynamic sortIndex;
+
+- (int32_t)sortIndexValue {
+	NSNumber *result = [self sortIndex];
+	return [result intValue];
+}
+
+- (void)setSortIndexValue:(int32_t)value_ {
+	[self setSortIndex:[NSNumber numberWithInt:value_]];
+}
+
+- (int32_t)primitiveSortIndexValue {
+	NSNumber *result = [self primitiveSortIndex];
+	return [result intValue];
+}
+
+- (void)setPrimitiveSortIndexValue:(int32_t)value_ {
+	[self setPrimitiveSortIndex:[NSNumber numberWithInt:value_]];
+}
 
 @dynamic symbolLetter;
 

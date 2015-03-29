@@ -10,4 +10,23 @@
 
 @implementation MYManagedObject
 
++ (NSString*)entityName{
+    abort();
+}
+
++ (NSArray*)fetchAllWithSortDescriptors:(NSArray *)sortDescriptors inManagedObjectContext:(NSManagedObjectContext *)moc{
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:moc];
+    [fetchRequest setEntity:entity];
+    
+    if (sortDescriptors) {
+        [fetchRequest setSortDescriptors:sortDescriptors];
+    }
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [moc executeFetchRequest:fetchRequest error:&error];
+    return fetchedObjects;
+}
+
 @end

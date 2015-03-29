@@ -106,6 +106,7 @@
             type.name = t[CDTypeAttributes.name];
             type.symbolLetter = t[CDTypeAttributes.symbolLetter];
             type.color = [[UIColor alloc] initWithString:t[CDTypeAttributes.color]];
+            type.sortIndexValue = [t[CDTypeAttributes.sortIndex] intValue];
         }];
         [self saveContext];
     }
