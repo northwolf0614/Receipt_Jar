@@ -15,13 +15,13 @@
 #import "SimpleExpenseCell.h"
 #import "PhotoExpenseCell.h"
 #import "SegmentedExpenseCell.h"
+#import "PopoverSelectionViewController.h"
 
-@interface ExpenseDetailViewController ()
+@interface ExpenseDetailViewController () <UIPopoverPresentationControllerDelegate>
 
 @end
 
 @implementation ExpenseDetailViewController{
-    UITapGestureRecognizer* _tap;
     UITextField* _currentTextField;
     NSArray* _allTypes;
 }
@@ -30,10 +30,6 @@
     [super viewDidLoad];
     
     _allTypes = [CDType fetchAllWithSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:CDTypeAttributes.sortIndex ascending:YES]] inManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
-    
-    _tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnScreen)];
-    [self.tableView addGestureRecognizer:_tap];
-    
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SimpleExpenseCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([SimpleExpenseCell class])];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([PhotoExpenseCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([PhotoExpenseCell class])];
@@ -49,13 +45,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)tapOnScreen{
-    if (_currentTextField) {
-        [_currentTextField resignFirstResponder];
-        _currentTextField = nil;
-    }
 }
 
 #pragma mark - Table view data source
@@ -93,30 +82,27 @@
     }
     
     // Configure the cell...
-    if ([cell isKindOfClass:[SimpleExpenseCell class]]) {
-        ((SimpleExpenseCell*)cell).textField.delegate = self;
-    }
     
     switch (indexPath.row) {
         case 0:
             ((SimpleExpenseCell*)cell).titleLabel.text = @"Title";
-            ((SimpleExpenseCell*)cell).textField.text = self.expense.title;
+            ((SimpleExpenseCell*)cell).contentLabel.text = self.expense.title;
             break;
         case 1:
             ((SimpleExpenseCell*)cell).titleLabel.text = @"Date";
-            ((SimpleExpenseCell*)cell).textField.text = [self.expense.date stringAsFormat:nil];
+            ((SimpleExpenseCell*)cell).contentLabel.text = [self.expense.date stringAsFormat:nil];
             break;
         case 2:
             ((SimpleExpenseCell*)cell).titleLabel.text = @"Amount";
-            ((SimpleExpenseCell*)cell).textField.text = [NSString stringWithFormat:@"$ %.2f", self.expense.totalAmountValue];
+            ((SimpleExpenseCell*)cell).contentLabel.text = [NSString stringWithFormat:@"$ %.2f", self.expense.totalAmountValue];
             break;
         case 3:
             ((SimpleExpenseCell*)cell).titleLabel.text = @"Location";
-            ((SimpleExpenseCell*)cell).textField.text = self.expense.location;
+            ((SimpleExpenseCell*)cell).contentLabel.text = self.expense.location;
             break;
         case 4:
             ((SimpleExpenseCell*)cell).titleLabel.text = @"Category";
-            ((SimpleExpenseCell*)cell).textField.text = self.expense.deductCategory.name;
+            ((SimpleExpenseCell*)cell).contentLabel.text = self.expense.deductCategory.name;
             break;
         case 5:
         {
@@ -141,13 +127,11 @@
 }
 
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
 /*
 // Override to support editing the table view.
@@ -175,31 +159,45 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    PopoverSelectionViewController* selectionVC = [[PopoverSelectionViewController alloc] init];
+    switch (indexPath.row) {
+        case 4:
+        {
+            NSArray* categories = [CDDeductionCategory fetchAllWithSortDescriptors:nil inManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
+            NSMutableArray* choices = [NSMutableArray arrayWithCapacity:categories.count];
+            [categories enumerateObjectsUsingBlock:^(CDDeductionCategory* cat, NSUInteger idx, BOOL* stop){
+                PopoverSelectionItem* item = [[PopoverSelectionItem alloc] init];
+                item.value = cat.name;
+                item.color = cat.color;
+                [choices addObject:item];
+            }];
+            selectionVC.choices = choices;
+            selectionVC.header = @"Category";
+            selectionVC.value = self.expense.deductCategory.name;
+        }
+            break;
+            
+        default:
+            break;
+    }
     
-    // Pass the selected object to the new view controller.
     
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    selectionVC.modalPresentationStyle = UIModalPresentationPopover;
+    UIPopoverPresentationController *presentationController = selectionVC.popoverPresentationController;
+    presentationController.delegate = self;
+    presentationController.permittedArrowDirections = 0;
+    presentationController.sourceView = self.view;
+    presentationController.sourceRect = self.view.bounds;
+    
+    [self.navigationController presentViewController:selectionVC animated:YES completion:nil];
 }
-*/
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - UITextFieldDelegate
 
@@ -210,6 +208,12 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return NO;
+}
+
+#pragma mark - UIPopoverPresentationControllerDelegate
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller{
+    return UIModalPresentationNone;
 }
 
 @end

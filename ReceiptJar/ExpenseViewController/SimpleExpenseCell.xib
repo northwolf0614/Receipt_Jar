@@ -23,24 +23,25 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="708-Ol-ELr">
-                        <rect key="frame" x="116" y="12" width="196" height="53"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-9A-m6J">
+                        <rect key="frame" x="151" y="28" width="42" height="21"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="708-Ol-ELr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="0Ce-D3-iRp"/>
                     <constraint firstItem="gSq-Tw-8Te" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="6jG-BV-aNM"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="708-Ol-ELr" secondAttribute="trailing" id="XfK-6o-qdd"/>
-                    <constraint firstItem="708-Ol-ELr" firstAttribute="leading" secondItem="gSq-Tw-8Te" secondAttribute="trailing" id="idh-8x-lcZ"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="708-Ol-ELr" secondAttribute="bottom" constant="4" id="iix-0c-nxR"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="mV0-9A-m6J" secondAttribute="bottom" constant="4" id="E9n-QA-GSz"/>
+                    <constraint firstItem="mV0-9A-m6J" firstAttribute="leading" secondItem="gSq-Tw-8Te" secondAttribute="trailing" id="FFe-Bv-qLK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="mV0-9A-m6J" secondAttribute="trailing" constant="8" id="Q3o-ap-YpI"/>
+                    <constraint firstItem="mV0-9A-m6J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="UDA-iw-m9C"/>
                     <constraint firstAttribute="bottomMargin" secondItem="gSq-Tw-8Te" secondAttribute="bottom" constant="4" id="lT1-4I-tfi"/>
                     <constraint firstItem="gSq-Tw-8Te" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="uqg-dB-gUh"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="textField" destination="708-Ol-ELr" id="qsi-0Z-VS7"/>
+                <outlet property="contentLabel" destination="mV0-9A-m6J" id="m65-1m-Hl9"/>
                 <outlet property="titleLabel" destination="gSq-Tw-8Te" id="hk4-2g-z2r"/>
             </connections>
             <point key="canvasLocation" x="85" y="269"/>

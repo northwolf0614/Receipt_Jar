@@ -61,6 +61,11 @@
 		ABCEE8E11AC2DB55001CB3C2 /* ExpenseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8FDDA71AC2A4400087AC86 /* ExpenseDetailViewController.xib */; };
 		ABD73FF51AC8AAE90012D42B /* SegmentedExpenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD73FF31AC8AAE90012D42B /* SegmentedExpenseCell.m */; };
 		ABD73FF61AC8AAE90012D42B /* SegmentedExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABD73FF41AC8AAE90012D42B /* SegmentedExpenseCell.xib */; };
+		ABD73FFB1AC8CEF10012D42B /* PopoverSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD73FF91AC8CEF10012D42B /* PopoverSelectionViewController.m */; };
+		ABD73FFC1AC8CEF10012D42B /* PopoverSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABD73FFA1AC8CEF10012D42B /* PopoverSelectionViewController.xib */; };
+		ABD73FFF1AC8E83B0012D42B /* PopoverSelectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD73FFE1AC8E83B0012D42B /* PopoverSelectionItem.m */; };
+		ABD740031AC8E9C70012D42B /* PopoverSelectionItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD740011AC8E9C70012D42B /* PopoverSelectionItemCell.m */; };
+		ABD740041AC8E9C70012D42B /* PopoverSelectionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABD740021AC8E9C70012D42B /* PopoverSelectionItemCell.xib */; };
 		E78A236B1AC10910003AF89D /* G8RecognitionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A22101AC1090F003AF89D /* G8RecognitionOperation.m */; };
 		E78A236C1AC10910003AF89D /* G8RecognizedBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = E78A22121AC1090F003AF89D /* G8RecognizedBlock.m */; };
 		E78A236D1AC10910003AF89D /* G8Tesseract.mm in Sources */ = {isa = PBXBuildFile; fileRef = E78A22141AC1090F003AF89D /* G8Tesseract.mm */; };
@@ -155,6 +160,14 @@
 		ABD73FF21AC8AAE90012D42B /* SegmentedExpenseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedExpenseCell.h; sourceTree = "<group>"; };
 		ABD73FF31AC8AAE90012D42B /* SegmentedExpenseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedExpenseCell.m; sourceTree = "<group>"; };
 		ABD73FF41AC8AAE90012D42B /* SegmentedExpenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegmentedExpenseCell.xib; sourceTree = "<group>"; };
+		ABD73FF81AC8CEF10012D42B /* PopoverSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSelectionViewController.h; sourceTree = "<group>"; };
+		ABD73FF91AC8CEF10012D42B /* PopoverSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSelectionViewController.m; sourceTree = "<group>"; };
+		ABD73FFA1AC8CEF10012D42B /* PopoverSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverSelectionViewController.xib; sourceTree = "<group>"; };
+		ABD73FFD1AC8E83B0012D42B /* PopoverSelectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSelectionItem.h; sourceTree = "<group>"; };
+		ABD73FFE1AC8E83B0012D42B /* PopoverSelectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSelectionItem.m; sourceTree = "<group>"; };
+		ABD740001AC8E9C70012D42B /* PopoverSelectionItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSelectionItemCell.h; sourceTree = "<group>"; };
+		ABD740011AC8E9C70012D42B /* PopoverSelectionItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSelectionItemCell.m; sourceTree = "<group>"; };
+		ABD740021AC8E9C70012D42B /* PopoverSelectionItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverSelectionItemCell.xib; sourceTree = "<group>"; };
 		ABEFCF2769A143F725102BCC /* libPods-ReceiptJar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReceiptJar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E78A220E1AC1090F003AF89D /* G8Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G8Constants.h; sourceTree = "<group>"; };
 		E78A220F1AC1090F003AF89D /* G8RecognitionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = G8RecognitionOperation.h; sourceTree = "<group>"; };
@@ -603,6 +616,7 @@
 		AB9612601ABA9D5000A145E1 /* ExpenseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ABD73FF71AC8CC3C0012D42B /* PopoverSelection */,
 				AB81F5301AC3C7F800698C5C /* PhotoCell */,
 				AB9612611ABA9D7200A145E1 /* ExpenseTableViewController.h */,
 				AB9612621ABA9D7200A145E1 /* ExpenseTableViewController.m */,
@@ -717,6 +731,21 @@
 				ABB2318C1ABA49B600B5447D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABD73FF71AC8CC3C0012D42B /* PopoverSelection */ = {
+			isa = PBXGroup;
+			children = (
+				ABD73FF81AC8CEF10012D42B /* PopoverSelectionViewController.h */,
+				ABD73FF91AC8CEF10012D42B /* PopoverSelectionViewController.m */,
+				ABD73FFA1AC8CEF10012D42B /* PopoverSelectionViewController.xib */,
+				ABD73FFD1AC8E83B0012D42B /* PopoverSelectionItem.h */,
+				ABD73FFE1AC8E83B0012D42B /* PopoverSelectionItem.m */,
+				ABD740001AC8E9C70012D42B /* PopoverSelectionItemCell.h */,
+				ABD740011AC8E9C70012D42B /* PopoverSelectionItemCell.m */,
+				ABD740021AC8E9C70012D42B /* PopoverSelectionItemCell.xib */,
+			);
+			name = PopoverSelection;
 			sourceTree = "<group>";
 		};
 		B45808E83FF722FDA6C0F65D /* Frameworks */ = {
@@ -1195,11 +1224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8FDDAE1AC2CA4E0087AC86 /* SimpleExpenseCell.xib in Resources */,
+				ABD73FFC1AC8CEF10012D42B /* PopoverSelectionViewController.xib in Resources */,
 				AB2835D31AC0BB5B002532B9 /* CameraViewController.xib in Resources */,
 				ABB231821ABA49B500B5447D /* LaunchScreen.xib in Resources */,
 				E78A23731AC10934003AF89D /* tessdata in Resources */,
 				AB6C85651ABB68F800434690 /* ExpenseSummaryCell.xib in Resources */,
 				ABD73FF61AC8AAE90012D42B /* SegmentedExpenseCell.xib in Resources */,
+				ABD740041AC8E9C70012D42B /* PopoverSelectionItemCell.xib in Resources */,
 				ABB2317F1ABA49B500B5447D /* Images.xcassets in Resources */,
 				AB6C856A1ABB6D4E00434690 /* TestData.plist in Resources */,
 				AB81F5351AC3C84200698C5C /* PhotoExpenseCell.xib in Resources */,
@@ -1269,10 +1300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD73FFB1AC8CEF10012D42B /* PopoverSelectionViewController.m in Sources */,
 				E78A236B1AC10910003AF89D /* G8RecognitionOperation.m in Sources */,
 				E78A236E1AC10910003AF89D /* G8TesseractParameters.m in Sources */,
 				AB96125D1ABA9A3E00A145E1 /* _CDExpense.m in Sources */,
 				AB9612361ABA532900A145E1 /* ReceiptJar.xcdatamodeld in Sources */,
+				ABD740031AC8E9C70012D42B /* PopoverSelectionItemCell.m in Sources */,
 				E78A236D1AC10910003AF89D /* G8Tesseract.mm in Sources */,
 				ABD73FF51AC8AAE90012D42B /* SegmentedExpenseCell.m in Sources */,
 				AB81F5341AC3C84200698C5C /* PhotoExpenseCell.m in Sources */,
@@ -1302,6 +1335,7 @@
 				ABB2317A1ABA49B500B5447D /* ViewController.m in Sources */,
 				AB9612411ABA907A00A145E1 /* MYManagedObject.m in Sources */,
 				AB9612761ABBAAFB00A145E1 /* SymbolView.m in Sources */,
+				ABD73FFF1AC8E83B0012D42B /* PopoverSelectionItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
