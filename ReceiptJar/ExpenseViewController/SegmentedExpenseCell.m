@@ -7,11 +7,12 @@
 //
 
 #import "SegmentedExpenseCell.h"
+#import "Constants.h"
 
 @implementation SegmentedExpenseCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    self.segmentedControl.tintColor = DEFAULT_GREY;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

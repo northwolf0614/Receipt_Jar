@@ -1160,11 +1160,11 @@
 					};
 					ABB2316A1ABA49B500B5447D = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = FR688XR96P;
+						DevelopmentTeam = H228Z7LA7E;
 					};
 					ABB231861ABA49B500B5447D = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = FR688XR96P;
+						DevelopmentTeam = 5P2S2MGCFY;
 						TestTargetID = ABB2316A1ABA49B500B5447D;
 					};
 				};
