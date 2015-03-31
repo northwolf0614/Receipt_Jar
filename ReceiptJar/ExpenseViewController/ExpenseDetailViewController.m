@@ -17,7 +17,7 @@
 #import "SegmentedExpenseCell.h"
 #import "PopoverSelectionViewController.h"
 
-@interface ExpenseDetailViewController () <UIPopoverPresentationControllerDelegate>
+@interface ExpenseDetailViewController () <UIPopoverPresentationControllerDelegate, PopoverSelectionViewDelegate>
 
 @end
 
@@ -165,10 +165,22 @@
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     PopoverSelectionViewController* selectionVC = [[PopoverSelectionViewController alloc] init];
+    selectionVC.delegate = self;
+    
     switch (indexPath.row) {
+        case 0:
+            selectionVC.header = @"Title";
+            selectionVC.value = self.expense.title;
+            selectionVC.enable = YES;
+            break;
+        case 2:
+            selectionVC.header = @"Amount";
+            selectionVC.value = [NSString stringWithFormat:@"$ %.2f", self.expense.totalAmountValue];
+            selectionVC.enable = YES;
+            break;
         case 4:
         {
-            NSArray* categories = [CDDeductionCategory fetchAllWithSortDescriptors:nil inManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
+            NSArray* categories = [CDDeductionCategory fetchAllWithSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:CDDeductionCategoryAttributes.name ascending:YES]] inManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
             NSMutableArray* choices = [NSMutableArray arrayWithCapacity:categories.count];
             [categories enumerateObjectsUsingBlock:^(CDDeductionCategory* cat, NSUInteger idx, BOOL* stop){
                 PopoverSelectionItem* item = [[PopoverSelectionItem alloc] init];
@@ -178,14 +190,14 @@
             }];
             selectionVC.choices = choices;
             selectionVC.header = @"Category";
+            selectionVC.enable = NO;
             selectionVC.value = self.expense.deductCategory.name;
         }
             break;
-            
+         
         default:
             break;
     }
-    
     
     selectionVC.modalPresentationStyle = UIModalPresentationPopover;
     UIPopoverPresentationController *presentationController = selectionVC.popoverPresentationController;
@@ -216,4 +228,43 @@
     return UIModalPresentationNone;
 }
 
+#pragma mark - PopoverSelectionViewDelegate
+
+- (void)selectionViewController:(PopoverSelectionViewController *)selectionViewController withHeader:(NSString *)header didChangeValueTo:(NSString *)value{
+    if ([header isEqualToString:@"Category"]) {
+        abort();
+    }
+    else if ([header isEqualToString:@"Title"]){
+        self.expense.title = value;
+        selectionViewController.value = value;
+        SimpleExpenseCell* cell = (SimpleExpenseCell*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        cell.contentLabel.text = value;
+    }
+    else if ([header isEqualToString:@"Amount"]){
+//        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+//        formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+//        formatter.locale = [NSLocale currentLocale];
+//        text = [text stringByReplacingOccurrencesOfString:formatter.internationalCurrencySymbol withString:@""];
+//        float fval = [formatter numberFromString:text].floatValue;
+    }
+    
+    [[CoreDataHelper sharedInstance] saveContext];
+}
+
+- (void)selectionViewController:(PopoverSelectionViewController *)selectionViewController withHeader:(NSString *)header didSelectItem:(PopoverSelectionItem *)item{
+    if ([header isEqualToString:@"Category"]) {
+        NSArray* categories = [CDDeductionCategory fetchAllWithSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:CDDeductionCategoryAttributes.name ascending:YES]] inManagedObjectContext:[[CoreDataHelper sharedInstance] moc]];
+        [categories enumerateObjectsUsingBlock:^(CDDeductionCategory* cat, NSUInteger idx, BOOL* stop){
+            if ([cat.name isEqualToString:item.value]) {
+                self.expense.deductCategory = cat;
+                selectionViewController.value = self.expense.deductCategory.name;
+                SimpleExpenseCell* cell = (SimpleExpenseCell*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:0]];
+                cell.contentLabel.text = self.expense.deductCategory.name;
+                *stop = YES;
+            }
+        }];
+    }
+    
+    [[CoreDataHelper sharedInstance] saveContext];
+}
 @end
