@@ -94,7 +94,9 @@
         popoverView = popoverView.superview;
     }
     if ([NSStringFromClass([popoverView class]) containsString:@"_UIPopoverView"]) {
-        [popoverView addMotionEffect:[[LZUtility sharedInstance] motionAtFront]];
+        LZUtility* sharedInstance=[LZUtility sharedInstance];
+        
+        //[popoverView addMotionEffect:[[LZUtility sharedInstance] motionAtFront]];
         popoverView.layer.shadowColor = [[UIColor blackColor] CGColor];
         popoverView.layer.shadowOffset = CGSizeMake(2.0, 3.0);
         popoverView.layer.shadowOpacity = 0.3;
